@@ -1,0 +1,86 @@
+[
+  {
+    "matchId": "sample-001",
+    "date": "2022-11-22",
+    "homeTeam": "France",
+    "awayTeam": "Australia",
+    "actual": "H",
+    "odds": { "home": 1.25, "draw": 5.8, "away": 11.0 },
+    "features": {
+      "eloDiff": 410,
+      "fifaPointsDiff": 280,
+      "marketValueLogRatio": 1.35,
+      "recentFormDiff": 0.42
+    }
+  },
+  {
+    "matchId": "sample-002",
+    "date": "2022-11-23",
+    "homeTeam": "Germany",
+    "awayTeam": "Japan",
+    "actual": "A",
+    "odds": { "home": 1.45, "draw": 4.4, "away": 7.2 },
+    "features": {
+      "eloDiff": 260,
+      "fifaPointsDiff": 190,
+      "marketValueLogRatio": 1.1,
+      "recentFormDiff": 0.18
+    }
+  },
+  {
+    "matchId": "sample-003",
+    "date": "2022-11-25",
+    "homeTeam": "England",
+    "awayTeam": "United States",
+    "actual": "D",
+    "odds": { "home": 1.72, "draw": 3.75, "away": 5.2 },
+    "features": {
+      "eloDiff": 160,
+      "fifaPointsDiff": 120,
+      "marketValueLogRatio": 0.72,
+      "recentFormDiff": 0.1
+    }
+  },
+  {
+    "matchId": "sample-004",
+    "date": "2022-11-26",
+    "homeTeam": "Argentina",
+    "awayTeam": "Mexico",
+    "actual": "H",
+    "odds": { "home": 1.55, "draw": 4.0, "away": 6.2 },
+    "features": {
+      "eloDiff": 300,
+      "fifaPointsDiff": 240,
+      "marketValueLogRatio": 0.95,
+      "recentFormDiff": 0.56
+    }
+  },
+  {
+    "matchId": "sample-005",
+    "date": "2022-11-27",
+    "homeTeam": "Belgium",
+    "awayTeam": "Morocco",
+    "actual": "A",
+    "odds": { "home": 1.95, "draw": 3.45, "away": 4.1 },
+    "features": {
+      "eloDiff": 140,
+      "fifaPointsDiff": 170,
+      "marketValueLogRatio": 0.42,
+      "recentFormDiff": -0.08
+    }
+  },
+  {
+    "matchId": "sample-006",
+    "date": "2022-12-18",
+    "homeTeam": "Argentina",
+    "awayTeam": "France",
+    "actual": "D",
+    "odds": { "home": 2.75, "draw": 3.1, "away": 2.8 },
+    "features": {
+      "eloDiff": -20,
+      "fifaPointsDiff": -15,
+      "marketValueLogRatio": -0.05,
+      "recentFormDiff": 0.04
+    }
+  }
+]

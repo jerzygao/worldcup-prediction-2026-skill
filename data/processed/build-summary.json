@@ -1,0 +1,395 @@
+{
+  "inputPath": "data/results.csv",
+  "outDir": "data/processed",
+  "firstMatchDate": "1872-11-30",
+  "lastMatchDate": "2026-03-31",
+  "matches": 49257,
+  "teams": 336,
+  "settings": {
+    "initialElo": 1500,
+    "homeAdvantage": 60,
+    "recentWindow": 10
+  },
+  "topElo": [
+    {
+      "team": "Spain",
+      "elo": 2213.93,
+      "recentForm": {
+        "matches": 10,
+        "wins": 7,
+        "draws": 3,
+        "losses": 0,
+        "goalsFor": 31,
+        "goalsAgainst": 8,
+        "points": 24,
+        "winRate": 0.7,
+        "pointsPerMatch": 2.4,
+        "goalDiffPerMatch": 2.3,
+        "cleanSheetRate": 0.7,
+        "formScore": 0.695
+      },
+      "matches": 781
+    },
+    {
+      "team": "Argentina",
+      "elo": 2158.68,
+      "recentForm": {
+        "matches": 10,
+        "wins": 8,
+        "draws": 1,
+        "losses": 1,
+        "goalsFor": 25,
+        "goalsAgainst": 4,
+        "points": 25,
+        "winRate": 0.8,
+        "pointsPerMatch": 2.5,
+        "goalDiffPerMatch": 2.1,
+        "cleanSheetRate": 0.6,
+        "formScore": 0.725
+      },
+      "matches": 1066
+    },
+    {
+      "team": "France",
+      "elo": 2138.55,
+      "recentForm": {
+        "matches": 10,
+        "wins": 8,
+        "draws": 1,
+        "losses": 1,
+        "goalsFor": 27,
+        "goalsAgainst": 11,
+        "points": 25,
+        "winRate": 0.8,
+        "pointsPerMatch": 2.5,
+        "goalDiffPerMatch": 1.6,
+        "cleanSheetRate": 0.4,
+        "formScore": 0.645
+      },
+      "matches": 933
+    },
+    {
+      "team": "England",
+      "elo": 2082.23,
+      "recentForm": {
+        "matches": 10,
+        "wins": 7,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 22,
+        "goalsAgainst": 5,
+        "points": 22,
+        "winRate": 0.7,
+        "pointsPerMatch": 2.2,
+        "goalDiffPerMatch": 1.7,
+        "cleanSheetRate": 0.7,
+        "formScore": 0.57
+      },
+      "matches": 1088
+    },
+    {
+      "team": "Brazil",
+      "elo": 2042.09,
+      "recentForm": {
+        "matches": 10,
+        "wins": 5,
+        "draws": 2,
+        "losses": 3,
+        "goalsFor": 18,
+        "goalsAgainst": 8,
+        "points": 17,
+        "winRate": 0.5,
+        "pointsPerMatch": 1.7,
+        "goalDiffPerMatch": 1,
+        "cleanSheetRate": 0.5,
+        "formScore": 0.245
+      },
+      "matches": 1057
+    },
+    {
+      "team": "Portugal",
+      "elo": 2041.48,
+      "recentForm": {
+        "matches": 10,
+        "wins": 6,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 26,
+        "goalsAgainst": 10,
+        "points": 21,
+        "winRate": 0.6,
+        "pointsPerMatch": 2.1,
+        "goalDiffPerMatch": 1.6,
+        "cleanSheetRate": 0.4,
+        "formScore": 0.485
+      },
+      "matches": 693
+    },
+    {
+      "team": "Colombia",
+      "elo": 2032.59,
+      "recentForm": {
+        "matches": 10,
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "goalsFor": 21,
+        "goalsAgainst": 10,
+        "points": 18,
+        "winRate": 0.5,
+        "pointsPerMatch": 1.8,
+        "goalDiffPerMatch": 1.1,
+        "cleanSheetRate": 0.5,
+        "formScore": 0.3
+      },
+      "matches": 636
+    },
+    {
+      "team": "Netherlands",
+      "elo": 2022.54,
+      "recentForm": {
+        "matches": 10,
+        "wins": 7,
+        "draws": 3,
+        "losses": 0,
+        "goalsFor": 30,
+        "goalsAgainst": 6,
+        "points": 24,
+        "winRate": 0.7,
+        "pointsPerMatch": 2.4,
+        "goalDiffPerMatch": 2.4,
+        "cleanSheetRate": 0.5,
+        "formScore": 0.675
+      },
+      "matches": 877
+    },
+    {
+      "team": "Ecuador",
+      "elo": 2006.55,
+      "recentForm": {
+        "matches": 10,
+        "wins": 2,
+        "draws": 8,
+        "losses": 0,
+        "goalsFor": 7,
+        "goalsAgainst": 4,
+        "points": 14,
+        "winRate": 0.2,
+        "pointsPerMatch": 1.4,
+        "goalDiffPerMatch": 0.3,
+        "cleanSheetRate": 0.6,
+        "formScore": 0.03
+      },
+      "matches": 589
+    },
+    {
+      "team": "Germany",
+      "elo": 2001.18,
+      "recentForm": {
+        "matches": 10,
+        "wins": 7,
+        "draws": 0,
+        "losses": 3,
+        "goalsFor": 23,
+        "goalsAgainst": 11,
+        "points": 21,
+        "winRate": 0.7,
+        "pointsPerMatch": 2.1,
+        "goalDiffPerMatch": 1.2,
+        "cleanSheetRate": 0.4,
+        "formScore": 0.425
+      },
+      "matches": 1029
+    },
+    {
+      "team": "Japan",
+      "elo": 1998.06,
+      "recentForm": {
+        "matches": 10,
+        "wins": 6,
+        "draws": 2,
+        "losses": 2,
+        "goalsFor": 18,
+        "goalsAgainst": 7,
+        "points": 20,
+        "winRate": 0.6,
+        "pointsPerMatch": 2,
+        "goalDiffPerMatch": 1.1,
+        "cleanSheetRate": 0.6,
+        "formScore": 0.39
+      },
+      "matches": 789
+    },
+    {
+      "team": "Morocco",
+      "elo": 1992.45,
+      "recentForm": {
+        "matches": 10,
+        "wins": 7,
+        "draws": 3,
+        "losses": 0,
+        "goalsFor": 18,
+        "goalsAgainst": 5,
+        "points": 24,
+        "winRate": 0.7,
+        "pointsPerMatch": 2.4,
+        "goalDiffPerMatch": 1.3,
+        "cleanSheetRate": 0.6,
+        "formScore": 0.58
+      },
+      "matches": 614
+    },
+    {
+      "team": "Croatia",
+      "elo": 1985,
+      "recentForm": {
+        "matches": 10,
+        "wins": 8,
+        "draws": 1,
+        "losses": 1,
+        "goalsFor": 29,
+        "goalsAgainst": 8,
+        "points": 25,
+        "winRate": 0.8,
+        "pointsPerMatch": 2.5,
+        "goalDiffPerMatch": 2.1,
+        "cleanSheetRate": 0.5,
+        "formScore": 0.715
+      },
+      "matches": 394
+    },
+    {
+      "team": "Norway",
+      "elo": 1973.77,
+      "recentForm": {
+        "matches": 10,
+        "wins": 7,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 31,
+        "goalsAgainst": 6,
+        "points": 23,
+        "winRate": 0.7,
+        "pointsPerMatch": 2.3,
+        "goalDiffPerMatch": 2.5,
+        "cleanSheetRate": 0.5,
+        "formScore": 0.635
+      },
+      "matches": 870
+    },
+    {
+      "team": "Uruguay",
+      "elo": 1960.63,
+      "recentForm": {
+        "matches": 10,
+        "wins": 4,
+        "draws": 4,
+        "losses": 2,
+        "goalsFor": 10,
+        "goalsAgainst": 9,
+        "points": 16,
+        "winRate": 0.4,
+        "pointsPerMatch": 1.6,
+        "goalDiffPerMatch": 0.1,
+        "cleanSheetRate": 0.6,
+        "formScore": 0.08
+      },
+      "matches": 970
+    },
+    {
+      "team": "Turkey",
+      "elo": 1959.15,
+      "recentForm": {
+        "matches": 10,
+        "wins": 7,
+        "draws": 1,
+        "losses": 2,
+        "goalsFor": 21,
+        "goalsAgainst": 14,
+        "points": 22,
+        "winRate": 0.7,
+        "pointsPerMatch": 2.2,
+        "goalDiffPerMatch": 0.7,
+        "cleanSheetRate": 0.3,
+        "formScore": 0.38
+      },
+      "matches": 640
+    },
+    {
+      "team": "Mexico",
+      "elo": 1955.61,
+      "recentForm": {
+        "matches": 10,
+        "wins": 3,
+        "draws": 5,
+        "losses": 2,
+        "goalsFor": 11,
+        "goalsAgainst": 10,
+        "points": 14,
+        "winRate": 0.3,
+        "pointsPerMatch": 1.4,
+        "goalDiffPerMatch": 0.1,
+        "cleanSheetRate": 0.5,
+        "formScore": -0.01
+      },
+      "matches": 1000
+    },
+    {
+      "team": "Switzerland",
+      "elo": 1939.12,
+      "recentForm": {
+        "matches": 10,
+        "wins": 6,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 25,
+        "goalsAgainst": 8,
+        "points": 21,
+        "winRate": 0.6,
+        "pointsPerMatch": 2.1,
+        "goalDiffPerMatch": 1.7,
+        "cleanSheetRate": 0.6,
+        "formScore": 0.52
+      },
+      "matches": 882
+    },
+    {
+      "team": "Denmark",
+      "elo": 1926.07,
+      "recentForm": {
+        "matches": 10,
+        "wins": 6,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 29,
+        "goalsAgainst": 10,
+        "points": 21,
+        "winRate": 0.6,
+        "pointsPerMatch": 2.1,
+        "goalDiffPerMatch": 1.9,
+        "cleanSheetRate": 0.5,
+        "formScore": 0.54
+      },
+      "matches": 872
+    },
+    {
+      "team": "Belgium",
+      "elo": 1922.12,
+      "recentForm": {
+        "matches": 10,
+        "wins": 6,
+        "draws": 4,
+        "losses": 0,
+        "goalsFor": 35,
+        "goalsAgainst": 10,
+        "points": 22,
+        "winRate": 0.6,
+        "pointsPerMatch": 2.2,
+        "goalDiffPerMatch": 2.5,
+        "cleanSheetRate": 0.4,
+        "formScore": 0.585
+      },
+      "matches": 851
+    }
+  ]
+}

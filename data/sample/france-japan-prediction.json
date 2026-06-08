@@ -1,0 +1,22 @@
+{
+  "homeTeam": "France",
+  "awayTeam": "Japan",
+  "neutral": true,
+  "odds": {
+    "home": 1.72,
+    "draw": 3.65,
+    "away": 5.1
+  },
+  "fifaPoints": {
+    "home": 1885,
+    "away": 1620
+  },
+  "squadRating": {
+    "home": 84.5,
+    "away": 77.8
+  },
+  "marketValue": {
+    "home": 1230000000,
+    "away": 275000000
+  }
+}

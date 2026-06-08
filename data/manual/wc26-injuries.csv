@@ -1,0 +1,19 @@
+team,teamId,player,position,status,injury,expectedReturn,lastUpdated,source
+Argentina,arg,Lionel Messi,Forward,doubtful,Undisclosed injury announced by Inter Miami,TBD,2026-02-11,Marca
+Brazil,bra,Neymar,Forward,doubtful,Long-term fitness concerns — future in Carlo Ancelotti's hands,Unknown,2026-02-08,Marca
+England,eng,Jude Bellingham,Midfielder,recovering,Injury concern — Real Madrid and England monitoring,Before tournament,2026-02-01,BBC Sport
+England,eng,Luke Shaw,Defender,recovering,Recurring hamstring issues — fitness management ongoing,Before tournament,2026-02-06,The Guardian
+France,fra,N'Golo Kante,Midfielder,doubtful,Hamstring injury sustained in Saudi Pro League — racing to be fit,May 2026,2026-02-09,L'Equipe
+France,fra,Lucas Hernandez,Defender,out,ACL tear — second major knee injury in career,Unlikely for tournament,2026-01-28,L'Equipe
+Spain,esp,Gavi,Midfielder,recovering,ACL recovery — long road back from November 2023 injury,Before tournament,2026-02-03,Marca
+Germany,ger,Leroy Sane,Forward,recovering,Groin surgery recovery — Bayern managing his return,April 2026,2026-02-07,Kicker
+Belgium,bel,Thibaut Courtois,Goalkeeper,recovering,ACL recovery — returned to action but managing workload,Fit for tournament,2026-02-05,ESPN
+Belgium,bel,Romelu Lukaku,Forward,recovering,Recurring thigh muscle issues — managing fitness carefully,Before tournament,2026-02-04,BBC Sport
+Portugal,por,Diogo Jota,Forward,doubtful,Knee ligament damage — extended rehabilitation,May 2026,2026-02-10,ESPN
+Netherlands,ned,Frenkie de Jong,Midfielder,recovering,Ankle injury — persistent issue from Euro 2024,Before tournament,2026-02-02,De Telegraaf
+Norway,nor,Erling Haaland,Forward,fit,No current injury — form and confidence being monitored,N/A,2026-02-10,The Guardian
+United States,usa,Gio Reyna,Midfielder,recovering,Hamstring strain — out of Borussia Dortmund training,March 2026,2026-02-08,ESPN
+South Korea,kor,Son Heung-min,Forward,fit,Calf muscle fatigue — Tottenham managing minutes,N/A,2026-02-11,BBC Sport
+Croatia,cro,Luka Modric,Midfielder,fit,Age-related fitness management — Real Madrid reducing minutes,N/A,2026-02-09,Marca
+Senegal,sen,Sadio Mane,Forward,recovering,Knee soreness — Al-Nassr managing workload ahead of World Cup,Before tournament,2026-02-06,ESPN
+Colombia,col,Luis Diaz,Forward,recovering,Knee ligament sprain — Liverpool monitoring recovery timeline,April 2026,2026-02-05,ESPN

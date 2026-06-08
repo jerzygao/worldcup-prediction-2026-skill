@@ -1,0 +1,11 @@
+{
+  "name": "worldcup-prediction",
+  "version": "1.0.0",
+  "description": "2026 FIFA World Cup match prediction system with multi-dimensional odds analysis, Asian handicap sentiment, and jingcai recommendation.",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "iconv-lite": "^0.6.3"
+  }
+}

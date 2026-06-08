@@ -1,0 +1,39 @@
+{
+  "version": "elo-fifa-tendency-robust-modern-2026-05-20",
+  "trainedOn": {
+    "since": "1994-01-01",
+    "trainUntil": "2021-12-31",
+    "validation": "2022-01-01 to 2026-03-31",
+    "validationLogLoss": 0.872836,
+    "validationBrierScore": 0.513446,
+    "validationAccuracy": 0.599864,
+    "rollingWindow": 30
+  },
+  "params": {
+    "eloCoef": 0.315051,
+    "fifaCoef": 0.035,
+    "formCoef": -0.005,
+    "winTendencyCoef": -0.949043,
+    "gdTendencyCoef": 0.139084,
+    "homeCoef": 0.341845,
+    "drawBias": -0.15,
+    "drawEloPenalty": 0.045,
+    "drawFifaPenalty": 0,
+    "drawFormPenalty": 0,
+    "drawTendencyCoef": 1.413384,
+    "drawNeutralBoost": 0.0039
+  },
+  "externalFeatureBlend": {
+    "odds": 0.35,
+    "squadRating": 0.08,
+    "marketValue": 0.07
+  },
+  "notes": [
+    "Robust modern update adopted after constrained search: validation improved while train Log Loss stayed essentially flat.",
+    "FIFA is now a moderate supporting signal in the modern-era fit, but Elo remains the main baseline strength feature.",
+    "Rolling draw tendency improved validation Log Loss and Brier Score.",
+    "Odds are blended as a pre-match market correction when available, not fitted from historical odds yet."
+    ,
+    "Previous conservative default was elo-fifa-tendency-conservative-2026-05-19 with validation Log Loss 0.876161."
+  ]
+}

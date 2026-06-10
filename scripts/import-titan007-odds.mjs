@@ -22,6 +22,7 @@ const SKILL_DIR = resolve(__dirname, "..");
 
 const ARGS = {
   mapping: resolve(SKILL_DIR, "data/manual/titan007-match-ids.csv"),
+  fixtures: resolve(SKILL_DIR, "data/manual/wc26-official-group-stage.csv"),
   out: resolve(SKILL_DIR, "data/manual/match-odds.csv"),
   limit: 0,
 };
@@ -126,6 +127,17 @@ async function main() {
   console.log("=== Titan007 European Odds Importer ===\n");
   const mapping = parseCsv(ARGS.mapping);
   console.log(`Mapping: ${mapping.length} matches loaded`);
+
+  // Build date lookup from fixtures
+  const fixtures = parseCsv(ARGS.fixtures);
+  const dateByMatch = new Map();
+  for (const f of fixtures) {
+    if (f.date && f.homeTeam && f.awayTeam) {
+      dateByMatch.set(`${norm(f.homeTeam)}|${norm(f.awayTeam)}`, f.date);
+    }
+  }
+  console.log(`Fixtures: ${fixtures.length} rows, ${dateByMatch.size} with dates`);
+
   const now = new Date().toISOString();
   const oddsRows = [];
   let success = 0, failed = 0;
@@ -137,8 +149,9 @@ async function main() {
     try {
       const odds = await fetchEuroOdds(m.titan007_id);
       if (odds && odds.current.win > 0) {
+        const matchDate = dateByMatch.get(`${norm(m.home)}|${norm(m.away)}`) || m.date || "";
         oddsRows.push({
-          date: m.date || "", homeTeam: m.home, awayTeam: m.away,
+          date: matchDate, homeTeam: m.home, awayTeam: m.away,
           bookmaker: "titan007 consensus average",
           homeOdds: String(odds.current.win), drawOdds: String(odds.current.draw), awayOdds: String(odds.current.loss),
           timestamp: now, sourceUrl: `https://1x2d.titan007.com/${m.titan007_id}.js`,

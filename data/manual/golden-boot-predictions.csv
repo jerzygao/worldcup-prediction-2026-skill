@@ -1,0 +1,81 @@
+rank,playerName,nationality,position,age,club,nationalTeamGoals,nationalTeamCaps,goalRate,xgPer90,expectedMatches,predictedGoals,dataStatus
+1,★ Romelu Lukaku,Belgium,FW,32,国际米兰,85,125,0.68,0.8,5.5,4.4,★已核实
+2,Harry Kane,England,FW,32,拜仁慕尼黑,70,95,0.737,0.66,5.5,3.63,★已核实
+3,Ayoze Perez,Spain,FW,31,比利亚雷亚尔,5,10,0.5,0.6,5.5,3.3,★已核实
+4,Lionel Messi,Argentina,FW,38,国际迈阿密,112,190,0.589,0.6,5.5,3.3,★已核实
+5,Kylian Mbappe,France,FW,27,皇家马德里,50,80,0.625,0.58,5.5,3.19,★已核实
+6,Jarrod Bowen,England,FW,28,西汉姆联,5,15,0.333,0.58,5.5,3.19,★已核实
+7,Ferran Torres,Spain,FW,25,巴塞罗那,20,45,0.444,0.57,5.5,3.13,★已核实
+8,Cristiano Ronaldo,Portugal,FW,41,利雅得胜利,135,220,0.614,0.56,5.5,3.08,★已核实
+9,Goncalo Ramos,Portugal,FW,24,巴黎圣日耳曼,10,25,0.4,0.56,5.5,3.08,★已核实
+10,Tim Kleindienst,Germany,FW,29,门兴,4,8,0.5,0.55,5.5,3.03,★已核实
+11,Mathys Tel,France,FW,20,热刺,2,5,0.4,0.55,5.5,3.03,★已核实
+12,Lois Openda,Belgium,FW,25,莱比锡,12,25,0.48,0.54,5.5,2.97,★已核实
+13,Nicolas Gonzalez,Argentina,FW,27,尤文图斯,8,35,0.229,0.54,5.5,2.97,★已核实
+14,Gabriel Martinelli,Brazil,FW,24,阿森纳,5,20,0.25,0.53,5.5,2.92,★已核实
+15,Randal Kolo Muani,France,FW,26,巴黎圣日耳曼,8,25,0.32,0.53,5.5,2.92,★已核实
+16,Yeremy Pino,Spain,FW,22,比利亚雷亚尔,3,10,0.3,0.52,5.5,2.86,★已核实
+17,Nick Woltemade,Germany,FW,23,斯图加特,3,10,0.3,0.51,5.5,2.81,★已核实
+18,Alvaro Morata,Spain,FW,32,AC米兰,35,80,0.438,0.51,5.5,2.81,★已核实
+19,Diogo Jota,Portugal,FW,28,利物浦,15,40,0.375,0.51,5.5,2.81,★已核实
+20,Maximilian Beier,Germany,FW,22,多特蒙德,2,8,0.25,0.5,5.5,2.75,★已核实
+21,Son Heung-min,South Korea,FW,33,热刺,55,130,0.423,0.6,4.5,2.7,★已核实
+22,Ricardo Pepi,United States,FW,22,PSV,10,25,0.4,0.6,4.5,2.7,★已核实
+23,Joshua Zirkzee,Netherlands,FW,24,曼联,5,15,0.333,0.49,5.5,2.69,★已核实
+24,Dodi Lukebakio,Belgium,FW,27,塞维利亚,4,15,0.267,0.49,5.5,2.69,★已核实
+25,Lamine Yamal,Spain,FW,17,巴塞罗那,5,20,0.25,0.49,5.5,2.69,★已核实
+26,Sadio Mane,Senegal,FW,33,阿尔纳斯尔,42,105,0.4,0.59,4.5,2.65,★已核实
+27,Desire Doue,France,FW,19,巴黎圣日耳曼,1,3,0.333,0.48,5.5,2.64,★已核实
+28,Valentin Castellanos,Argentina,FW,26,拉齐奥,3,12,0.25,0.48,5.5,2.64,★已核实
+29,Savio,Brazil,FW,21,曼城,2,8,0.25,0.47,5.5,2.58,★已核实
+30,Christian Pulisic,United States,FW,27,AC米兰,30,75,0.4,0.57,4.5,2.56,★已核实
+31,Boulaye Dia,Senegal,FW,28,拉齐奥,10,30,0.333,0.57,4.5,2.56,★已核实
+32,Leandro Trossard,Belgium,FW,30,阿森纳,10,35,0.286,0.46,5.5,2.53,★已核实
+33,Michael Olise,France,FW,23,拜仁慕尼黑,4,12,0.333,0.46,5.5,2.53,★已核实
+34,Jordy Caicedo,Ecuador,FW,27,米内罗美洲,5,15,0.333,0.56,4.5,2.52,★已核实
+35,Luis Diaz,Colombia,FW,28,拜仁慕尼黑,15,55,0.273,0.56,4.5,2.52,★已核实
+36,Endrick,Brazil,FW,19,皇家马德里,3,10,0.3,0.45,5.5,2.48,★已核实
+37,Deniz Undav,Germany,FW,28,斯图加特,5,10,0.5,0.45,5.5,2.48,★已核实
+38,Koki Ogawa,Japan,FW,28,海伦芬,5,15,0.333,0.55,4.5,2.48,★已核实
+39,Marcus Thuram,France,FW,27,国际米兰,12,25,0.48,0.45,5.5,2.48,★已核实
+40,Olsen,Norway,FW,32,顿涅茨克矿工,14,58,0.241,0.55,4.5,2.48,预估
+41,James Maddison,England,FW,28,热刺,3,15,0.2,0.45,5.5,2.48,★已核实
+42,Armando Gonzalez,Mexico,FW,22,瓜达拉哈拉,2,5,0.4,0.54,4.5,2.43,★已核实
+43,Raphinha,Brazil,FW,28,巴塞罗那,10,30,0.333,0.44,5.5,2.42,★已核实
+44,Michy Batshuayi,Belgium,FW,31,法兰克福,25,55,0.455,0.44,5.5,2.42,★已核实
+45,Mikel Oyarzabal,Spain,FW,28,皇家社会,15,35,0.429,0.44,5.5,2.42,★已核实
+46,Julian Alvarez,Argentina,FW,25,马德里竞技,15,45,0.333,0.44,5.5,2.42,★已核实
+47,Eberechi Eze,England,FW,27,水晶宫,3,10,0.3,0.44,5.5,2.42,★已核实
+48,Dominic Solanke,England,FW,27,热刺,2,5,0.4,0.44,5.5,2.42,★已核实
+49,Cristian Olivera,Uruguay,FW,22,格雷米奥,1,3,0.333,0.53,4.5,2.39,★已核实
+50,Lautaro Martinez,Argentina,FW,27,国际米兰,30,65,0.462,0.43,5.5,2.36,★已核实
+51,Kaoru Mitoma,Japan,FW,28,布莱顿,8,25,0.32,0.52,4.5,2.34,★已核实
+52,Ayase Ueda,Japan,FW,27,费耶诺德,10,25,0.4,0.52,4.5,2.34,★已核实
+53,Luis Suarez,Colombia,FW,28,葡萄牙体育,8,20,0.4,0.52,4.5,2.34,★已核实
+54,Ousmane Dembele,France,FW,28,巴黎圣日耳曼,5,40,0.125,0.42,5.5,2.31,★已核实
+55,Christopher Nkunku,France,FW,27,切尔西,5,12,0.417,0.42,5.5,2.31,★已核实
+56,Iliman Ndiaye,Senegal,FW,25,埃弗顿,8,25,0.32,0.51,4.5,2.29,★已核实
+57,Brian Brobbey,Netherlands,FW,23,阿贾克斯,5,15,0.333,0.41,5.5,2.25,★已核实
+58,Cesar Huerta,Mexico,FW,23,安德莱赫特,2,8,0.25,0.49,4.5,2.21,★已核实
+59,Oh Hyeon-gyu,South Korea,FW,24,亨克,3,15,0.2,0.49,4.5,2.21,★已核实
+60,Joo Min-kyu,South Korea,FW,35,蔚山HD,5,15,0.333,0.49,4.5,2.21,★已核实
+61,Enner Valencia,Ecuador,FW,35,巴西国际,42,90,0.467,0.49,4.5,2.21,★已核实
+62,Holm,Sweden,FW,26,马尔默,15,71,0.211,0.49,4.5,2.21,预估
+63,Mihai A,Norway,FW,20,年轻人,6,36,0.167,0.49,4.5,2.21,预估
+64,Evanilson,Brazil,FW,25,多特蒙德,3,8,0.375,0.4,5.5,2.2,★已核实
+65,Chemsdine Talbi,Morocco,FW,22,桑德兰,2,10,0.2,0.4,5.5,2.2,★已核实
+66,Cody Gakpo,Netherlands,FW,26,利物浦,12,35,0.343,0.4,5.5,2.2,★已核实
+67,Bradley Barcola,France,FW,22,巴黎圣日耳曼,5,10,0.5,0.4,5.5,2.2,★已核实
+68,Pedro Neto,Portugal,FW,25,切尔西,5,20,0.25,0.4,5.5,2.2,★已核实
+69,Quioto Jr.,Canada,FW,24,莫塔瓜,7,46,0.152,0.48,4.5,2.16,预估
+70,Mao Hosoya,Japan,FW,22,柏太阳神,3,8,0.375,0.48,4.5,2.16,★已核实
+71,Rodrygo,Brazil,FW,24,皇家马德里,8,30,0.267,0.39,5.5,2.15,★已核实
+72,Chris Fuhrich,Germany,FW,27,斯图加特,3,8,0.375,0.39,5.5,2.15,★已核实
+73,Julian Quinones,Mexico,FW,28,卡迪西亚,6,18,0.333,0.47,4.5,2.11,★已核实
+74,Noa Lang,Netherlands,FW,26,PSV,4,15,0.267,0.38,5.5,2.09,★已核实
+75,Franjo Ivanovic,Croatia,FW,21,拜仁慕尼黑二队,1,3,0.333,0.46,4.5,2.07,★已核实
+76,Estevao,Brazil,FW,18,切尔西,1,3,0.333,0.37,5.5,2.04,★已核实
+77,Matheus Cunha,Brazil,FW,26,狼队,4,12,0.333,0.37,5.5,2.04,★已核实
+78,Youssef En-Nesyri,Morocco,FW,28,阿尔伊蒂哈德,20,60,0.333,0.37,5.5,2.04,★已核实
+79,Junya Ito,Japan,FW,32,兰斯,13,55,0.236,0.45,4.5,2.02,★已核实
+80,Takumi Minamino,Japan,FW,30,摩纳哥,20,60,0.333,0.45,4.5,2.02,★已核实

@@ -91,8 +91,26 @@ function csvEscape(value) {
 
 function writeCsv(filePath, rows, headers) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  const lines = [headers.join(","), ...rows.map((row) => headers.map((h) => csvEscape(row[h])).join(","))];
-  fs.writeFileSync(filePath, `${lines.join("\n")}\n`);
+  const existingRows = [];
+  if (fs.existsSync(filePath)) {
+    const text = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "");
+    const lines = text.split(/\r?\n/).filter(Boolean);
+    if (lines.length > 1) {
+      const hdrs = parseCsvLine(lines[0]);
+      for (let i = 1; i < lines.length; i++) {
+        const cells = parseCsvLine(lines[i]);
+        existingRows.push(Object.fromEntries(hdrs.map((h, j) => [h, cells[j] ?? ""])));
+      }
+    }
+  }
+  const keyFields = ["date", "homeTeam", "awayTeam", "bookmaker"];
+  const keyMap = new Map();
+  const n = (v) => String(v ?? "").trim().toLowerCase();
+  for (const row of existingRows) keyMap.set(keyFields.map((f) => n(row[f])).join("|"), row);
+  for (const row of rows) keyMap.set(keyFields.map((f) => n(row[f])).join("|"), row);
+  const merged = [...keyMap.values()];
+  const outLines = [headers.join(","), ...merged.map((row) => headers.map((h) => csvEscape(row[h])).join(","))];
+  fs.writeFileSync(filePath, `${outLines.join("\n")}\n`);
 }
 
 function norm(value) {

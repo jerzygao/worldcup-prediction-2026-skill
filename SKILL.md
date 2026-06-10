@@ -109,9 +109,42 @@ node scripts/predict-match.mjs --input data/sample/france-japan-prediction.json
 - `data/manual/wc26-teams.csv`：晋级球队分组、FIFA 排名、主教练、风格和关键球员备注。
 - `data/manual/wc26-official-group-stage.csv`：已整理的小组赛官方赛程字段，包含比赛编号、日期、小组、双方、FIFA 展示名、官方场馆/城市、来源 URL 和核验日期。批量预测优先读取该文件。
 - `data/manual/wc26-squad-announcements.csv`：最新国家队名单公布状态、名单类型、来源 URL 和模型使用限制。
-- `data/manual/wc26-squad-players.csv`：从已公布名单中解析出的球员行。行可标记为 `reported`、`source_partial` 或 `source_conflict`；不要把部分来源行当作最终首发数据。
+- `data/manual/player-database.csv`：1248 名球员数据库，含姓名、国籍、位置、年龄、身高、出场、进球、俱乐部、联赛、身价。`dataStatus` 列标注数据可靠性（★已核实 494 人 / 预估 754 人）。⚠️ 原引用的 `wc26-squad-players.csv` 不存在；此文件为替代来源。
 - `data/manual/wc26-tournament-winner-odds.csv`：冠军赔率快照，只用于赛事背景，除非赛前重新核验。
 - `data/manual/wc26-injuries.csv`：伤病/状态备注快照，只用于报告背景，除非赛前重新核验。
+- `data/manual/elo-recent-form.csv`：48 队 Elo 评分 + 近 10 场战绩（胜/平/负结构化），附带 FIFA 排名、阵容身价、球员数、平均年龄、核心球员。Elo 和近 10 场是预测模型核心特征（权重 0.25 + 0.15）。`dataStatus` 列标注可靠性（★已核实 19 队 / 预估 29 队）。来源：外部全景工作簿导入。
+- `data/manual/position-analysis.csv`：48 队 GK/DF/MF/FW 位置人数、平均身价（欧元）、平均年龄分解。用于战术匹配分析和报告增强。
+- `data/manual/golden-boot-predictions.csv`：80 名射手预测排名，含国家队进球/出场、进球率、xG/90、预期出场、预测总进球。仅用于报告章节，不参与预测模型。
+
+### 外部数据导入流程（Excel → CSV）
+
+当遇到 Excel 工作簿或其他外部数据源时，按此流程评估和导入：
+
+1. **列清单**：遍历所有 sheet，识别每张表的行数、列数和数据结构
+2. **对比 skill 现有数据**：
+   - 检查 `data/manual/` 下已有文件，识别重复字段和独有字段
+   - ⚠️ **关键陷阱**：Elo 和近10场战绩在管线内已有实时计算结果（`build-elo-form.mjs` → `data/processed/team-current.json`），外部 Excel 的 Elo/form 是静态快照，**管线数据更准**。导入前先对比验证，不要盲目替换。
+3. **检验数据质量**：
+   - 检查每行有无 `数据状态` / `dataStatus` 列（★已核实 vs 预估）
+   - 对"预估"数据：交叉验证核心字段（核心球员名、身价等），假名字是 red flag
+4. **队名映射**：
+   - Excel 中文队名 → Skill 英文队名：用 `references/team-name-cn.md` 的 CN 映射表做反向查找
+   - 注意变体（"沙特阿拉伯"→"沙特"、"刚果(金)"→"刚果金"）
+5. **导出到 `data/manual/`**：
+   - 保留 `dataStatus` 列标注可靠性
+   - 结构化字段（如"9胜1平0负"）解析为数值（formWins=9, formDraws=1, formLosses=0）
+6. **更新本 SKILL.md 的数据文件列表**，添加新文件描述和来源标注
+7. **区分用途**：模型特征数据 → 可接入预测管线；报告增强数据 → 仅用于报告/可视化
+
+⚠️ **不要**把外部 Elo/form 数据直接写入 `team-strength.csv` 或覆盖 `data/processed/team-current.json`。管线自带的 Elo 更准确且覆盖全 48 队。外部数据只能用于：交叉验证、`dataStatus=source_partial` 参考上下文、报告增强。
+
+### 辅助分析脚本
+
+```bash
+python3 scripts/auxiliary-squad-analysis.py
+```
+
+输出 `output/squad-auxiliary-analysis.md`，包含：48 队位置结构表、Top 8 强弱位置对比、关键战位置对位分析、年龄结构、联赛分布、身价集中度。仅用于辅助解读，不参与模型计算。依赖 `data/manual/player-database.csv` 和 `data/manual/position-analysis.csv`（需先跑 pipeline 生成预测 JSON）。
 
 批量预测 2026 世界杯小组赛、模拟出线并生成报告：
 
@@ -224,9 +257,69 @@ node scripts/generate-report-2026.mjs
 
 足球解释必须基于已有特征。不要编造伤病、首发或战术新闻。
 
+## 报告生成规则
+
+### 球队名称
+
+生成任何预测报告、可视化页面或海报时，**所有球队名称必须使用中文**，禁止出现英文队名。完整映射表见 `references/team-name-cn.md`（48 队中英文对照 + Python 快速替换代码）。
+
+包括但不限于：赛程表、预测概率表、夺冠概率、小组出线、赔率对比、体彩推荐、战术分析备注中的队名。如果其他数据源（如 matchupNotes、tactical profiles）包含英文队名，必须在输出前统一替换。
+
+⚠️ **matchupNotes 特别提醒：** 模型生成的 `matchupNotes` 字段（如 "France 的转换推进可能冲击 Japan 的防线"）使用英文队名。生成报告时必须在输出前对整段 notes 做全量替换，简单写法：
+```python
+for eng, ch in CN.items():
+    notes = notes.replace(eng, ch)
+```
+
+### 报告完整结构
+
+一份完整的预测报告应包含以下章节：
+
+1. **模型配置** — 版本号、训练/验证窗口、验证指标、模型系数、外部特征混合权重
+2. **夺冠概率** — 48 队全量排行，含中文名、小组、各轮次概率、身价、FIFA积分
+3. **小组出线概率** — 12 组逐组展示，每队第1/第2/第3晋级概率、均分、身价、FIFA
+4. **赛程 & 逐场预测（含体彩推荐）** — 按日期分组，每场包含：
+   - 胜平负概率 + 预测比分 + 置信度 + 爆冷风险
+   - 双源赔率对比（The Odds API + Titan007，带差异 ▲▼标注）
+   - 亚盘/大小球市场情绪
+   - 实力对比（FIFA排名、身价、阵容评分）
+   - 战术分析备注（队名须替换为中文）
+   - **🎯 体彩推荐（嵌入每场）：**
+     - 单场胜平负（SPF）：概率≥50%时给出方向
+     - 让球胜平负（RQSPF）：概率≥65%或强弱悬殊时推荐
+     - 比分推荐：3个最可能比分
+     - 总进球推荐
+5. **混合过关方案推荐** — 独立章节，分两个子板块：
+   - 按比赛日分组推荐：每日≥2场可组合时，推荐2串1/3串1 + 稳胆推荐
+   - 跨日优选方案：全场最高概率Top 10 + 4串1旗舰方案 + 2串1优选方案
+6. **数据来源说明**
+
+**体彩推荐逻辑：**
+- 单场胜平负仅在最高概率 ≥ 50% 时给出方向
+- 让球胜平负在概率 ≥ 65% 或强弱悬殊时推荐
+- 概率不明时（最高仅 35-49%），提示"倾向不明显，建议关注让球方向"
+- 混合过关仅精选置信度高的场次
+- 表中字段"FIFA积分"指国际足联排名积分（FIFA Points），不是排名位次
+
+### 页面生成
+
+生成 HTML 可视化页面时也须遵循中文队名规则，且页面中不应出现"博彩"等敏感字眼，改用"赔率分析""市场数据""体彩推荐"等表述。
+
 ## Titan007 数据增强
 
 本 skill 集成了 Titan007（球探网）的亚洲赔率数据作为补充数据源：
+
+### ⚠️ 双源赔率合并规则（重要）
+
+`match-odds.csv` 同时存放 The Odds API 和 Titan007 两个来源的赔率行，通过 `bookmaker` 字段区分：
+- `the-odds-api consensus average` — Odds API 数据（~40/72 场）
+- `titan007 consensus average` — Titan007 共识赔率（~71/72 场）
+
+`update-realtime-prematch-data.mjs` 的 `writeCsv` 使用**合并模式**写入，key = `date|homeTeam|awayTeam|bookmaker`，同 key 新行覆盖旧行。两个源的 bookmaker 值不同，互不干扰。
+
+**不要**把 `writeCsv` 改回简单覆盖模式，否则跑一次 preflight 就会清掉 Titan007 数据。两个脚本写入同一文件：
+- `update-realtime-prematch-data.mjs` — 合并模式写入 Odds API 行
+- `import-titan007-odds.mjs` — 追加模式写入 Titan007 行
 
 ### 欧赔双源
 
@@ -264,5 +357,46 @@ node scripts/fetch-jingcai-odds.mjs --date=2026-06-11
 
 ### 数据文件
 
-- `data/manual/titan007-match-ids.csv` — 72 场 ID 映射表
+- `data/manual/titan007-match-ids.csv` — 72 场 ID 映射表（⚠️ 无 date 字段，需从 fixtures 查）
 - `data/manual/jingcai-schedule.json` — 24 场竞彩赛程
+
+### ⚠️ Titan007 日期传入陷阱
+
+`titan007-match-ids.csv` 没有 `date` 列。`import-titan007-odds.mjs` 在写入 `match-odds.csv` 时，通过 `homeTeam|awayTeam` 从 `wc26-official-group-stage.csv` 查日期。
+
+**如果 `import-titan007-odds.mjs` 写入的行 date 字段为空**，说明赛程文件路径不对或队名匹配失败。预测管线按 `date|homeTeam|awayTeam` 匹配赔率，空日期永远匹配不上，Titan007 数据等于没用上。
+
+排查：检查 `data/manual/match-odds.csv` 里 Titan007 行首的日期字段是否为空。
+
+### 🧩 辅助数据源（低权重，仅供报告参考）
+
+以下文件不在预测管线中使用，但 LLM 撰写报告时可查阅以丰富球队画像、战术分析和球员维度的描述：
+
+| 文件 | 内容 | 用途 |
+|------|------|------|
+| `data/manual/player-database.csv` | 1248 名球员明细（位置、年龄、身高、出场、进球、俱乐部、联赛、身价） | 阵容深度、核心球员、位置轮换分析 |
+| `data/manual/position-analysis.csv` | 48 队 GK/DF/MF/FW 人数 + 各位置平均身价 + 平均年龄 | 位置结构对比、战术对位分析 |
+| `data/manual/elo-recent-form.csv` | 48 队 Elo 评分 + 近 10 场战绩（结构化） | 注：Elo/form 管线已有更准确数据，此文件为 Excel 快照备用参考 |
+| `data/manual/golden-boot-predictions.csv` | 80 名射手预测（xG/90、预期出场、预测总进球） | 金靴争夺、球员叙事 |
+
+**使用原则：**
+- 这些数据**不是**预测模型的特征输入，仅作为 LLM 撰写报告时的背景上下文
+- 优先级低于模型输出和官方数据，仅在需要丰富描述、举例说明时翻阅
+- `elo-recent-form.csv` 中的 "预估" 状态行（30 队）需在报告中注明为参考性质
+- 可用 `scripts/auxiliary-squad-analysis.py` 一键生成 squad 维度的辅助分析报告
+
+### 📊 可视化仪表盘生成
+
+完整报告和可视化页面的生成指南见 `references/report-generation.md`。核心模式是用 `execute_code` 里的 Python 脚本一次性读取所有数据文件，内联生成自包含的 HTML 或 Markdown 文件。
+
+**桌面宽屏版：** `~/open-workspace/worldcup-prediction/2026-worldcup-dashboard.html`
+**小红书竖屏版（1080px）：** `~/open-workspace/worldcup-prediction/2026-worldcup-dashboard-mobile.html`
+**完整 MD 报告（含体彩推荐+混合过关方案）：** `~/open-workspace/worldcup-prediction/2026-worldcup-full-report.md`
+
+刷新数据后需重新生成，不支持动态加载。
+
+**设计规范（用户偏好）：**
+- 报告和页面中所有球队名称必须使用中文（英文名仅作为辅助标注）
+- 双数据源赔率并排显示，差异用 ▲▼ 标注
+- 不出现"博彩"字眼，改用"赔率分析/市场数据/体彩推荐"
+- 每场比赛显示两队 FIFA 排名、身价、阵容评分

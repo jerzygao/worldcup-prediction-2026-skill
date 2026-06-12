@@ -85,7 +85,8 @@ function writeCsv(path, rows, fields) {
     const existingRows = new Set(existing.split("\n").slice(1).filter(l => l.trim()));
     const newRows = lines.filter(l => !existingRows.has(l));
     if (newRows.length === 0) { console.log(`  No new odds data to write.`); return; }
-    writeFileSync(path, existing + newRows.join("\n") + "\n");
+    const existingEndsWithNewline = existing.endsWith("\n");
+    writeFileSync(path, (existingEndsWithNewline ? existing : existing + "\n") + newRows.join("\n") + "\n");
     console.log(`  Appended ${newRows.length} new rows.`);
   } else {
     writeFileSync(path, newContent);

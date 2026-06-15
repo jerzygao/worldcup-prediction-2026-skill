@@ -10,10 +10,7 @@
 | `hhad` | 让球胜平负（让球数 + 三方向赔率） | `getMatchCalculatorV1.qry?channel=c&poolCode=hhad` | 需 `Referer` 头 |
 
 **完整 URL：**
-```
-GET https://webapi.sporttery.cn/gateway/uniform/football/getMatchCalculatorV1.qry?channel=c&poolCode=crs
-GET https://webapi.sporttery.cn/gateway/uniform/football/getMatchCalculatorV1.qry?channel=c&poolCode=hhad
-```
+```\nGET https://webapi.sporttery.cn/gateway/uniform/football/getMatchCalculatorV1.qry?channel=c&poolCode=crs\nGET https://webapi.sporttery.cn/gateway/uniform/football/getMatchCalculatorV1.qry?channel=c&poolCode=hhad\n```\n\n**⚠️ 2026-06-15 API 响应结构变更：** 返回不再是平铺的 `matchList`，而是嵌套在 `value.matchInfoList[].subMatchList[]` 中。每场比赛的字段名也变了：\n- `homeTeam`/`awayTeam` → `homeTeamAllName`/`awayTeamAllName`（或 `homeTeamAbbName`/`awayTeamAbbName`）\n- `leagueName` → 使用 `matchNumStr` 识别（周一013~周三024 等）\n- `groupName` 字段为空\n- `matchId`、`matchNumStr`、`businessDate` 仍在\n\n**⚠️ SSL 证书：** `webapi.sporttery.cn` 使用国内 CA 证书，Python `urllib` 需 `ssl._create_unverified_context()` 才能连接。\n\n**⚠️ 执行环境：** API 从 `execute_code` 沙箱可正常访问，从 `terminal` 可能被 WAF 拦截返回 403。受 WAF 限制时改用 execute_code 调用脚本。
 
 **必要请求头：**
 ```

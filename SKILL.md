@@ -126,6 +126,7 @@ node scripts/merge-fifa-features.mjs --matches data/processed/match-features.csv
 node scripts/build-rolling-tendency-features.mjs --input data/processed/match-features-fifa.csv --output data/processed/match-features-tendency.csv
 
 # Step 2: 在 27K 历史场次上拟合（22462 训练 + 4033 验证）
+# 依赖: numpy, scipy（pip3 install numpy scipy）
 python3 scripts/recalibrate-model.py
 # 输出: output/recalibration-result.json
 # 自动更新: config/calibrated-model.json
@@ -588,12 +589,16 @@ node scripts/adjust-with-ah-ou.mjs
 
 **核心接口：** 竞彩官网 `webapi.sporttery.cn` 有开放 JSON API（不带 token，加 Referer 头即可），两个 poolCode：
 
-| poolCode | 数据 | 状态 |
-|----------|------|------|
-| `crs` | 波胆（31种正确比分赔率） | ✅ 开放，HTTP 200 |
-| `hhad` | 让球胜平负（让球数 + 三方向赔率） | ✅ 开放，HTTP 200（需 +Referer 头） |
+| poolCode | 数据 | 端点 | 状态 |
+|----------|------|------|------|
+| `crs` | 波胆（31种正确比分赔率） | `getMatchCalculatorV1.qry?channel=c&poolCode=crs` | ✅ 开放 |
+| `hhad` | 让球胜平负（让球数 + 三方向赔率） | `getMatchCalculatorV1.qry?channel=c&poolCode=hhad` | ✅ 开放（需 +Referer 头）|
 
-**⚠️ 让球 API（hhad）需要 Referer 头：** 不加 `Referer: https://www.sporttery.cn/jc/jsq/zqbf/` 会返回 HTTP 403 WAF 拦截。`crs` 不需要。
+**⚠️ 2026-06-15 API 响应结构变更：** 响应不再是平铺的 `matchList`，而是嵌套在 `value.matchInfoList[].subMatchList[]` 中。字段名也变了：`homeTeamAllName`/`awayTeamAllName`（不是 `homeTeam`/`awayTeam`）。`groupName` 字段为空，需要按返回的 12 场全收。
+
+**⚠️ SSL 证书 + WAF：** `webapi.sporttery.cn` 使用国内 CA 证书，`urllib` 需 `ssl._create_unverified_context()`。且 API 从 `execute_code` 沙箱可正常访问，从 `terminal` 可能被 WAF 拦截（403）。遇到 WAF 时改用 execute_code 调用脚本。
+
+**⚠️ hhad 需要 Referer 头：** 不加 `Referer: https://www.sporttery.cn/jc/jsq/zqbf/` 会返回 HTTP 403 WAF 拦截。`crs` 不需要。
 
 **队名：** 返回中文队名（"巴西"、"刚果(金)"）。详见 `references/team-name-cn.md` 的 EN_TO_CN 映射。
 
@@ -639,9 +644,7 @@ bash scripts/run-score-odds-pipeline.sh
 
 **定时任务：** 每天北京时间 10:00 自动执行（cron ID: 80d61678234b），调用 `run-score-odds-pipeline.sh`。
 
-**保留的旧脚本：** `fetch-jingcai-score-odds.py`（仅波胆）已废弃，被 `fetch-jingcai-odds.py`（波胆+让球合并）替代。
-
-**⚠️ 2026-06-15 已知缺失：** `fetch-jingcai-odds.py` 尚未创建（已废弃的 `fetch-jingcai-score-odds.py` 存在但只输出 DEPRECATED 并退出）。需要创建该脚本后才能执行波胆+让球拉取。在此之前竞彩步骤跳过。
+**⚠️ 2026-06-15：** `generate-betting-report.py` 尚未创建，竞彩推荐报告生成步骤需跳过。数据拉取+合并已完成。
 
 ### 数据文件
 
@@ -673,9 +676,10 @@ bash scripts/run-score-odds-pipeline.sh
 |------|------|
 | `scripts/post-match-update.py` | 全自动赛后链路入口：验证 → 同步 → Elo重建 → 重预测 → 重模拟 → 重报告 |
 | `scripts/sync-worldcup-results.mjs` | 将 prediction-log.json 的已验证赛果写入 data/results.csv，供主模型 build-elo-form 使用 |
-| `scripts/fetch-jingcai-odds.py` | ⭐ 拉取竞彩数据（波胆31种比分赔率 + 让球胜平负3方向赔率），替代旧版抓取+硬编码阈值 |
+| `scripts/fetch-jingcai-odds.py` | ⭐ 拉取竞彩数据（波胆31种比分赔率 + 让球胜平负3方向赔率）。2026-06-15 创建，处理嵌套 API 结构（matchInfoList→subMatchList）和 SSL/WAF 问题 |
 | `scripts/recalibrate-model.py` | ⭐ 完整逻辑回归重拟合：build-elo-form → merge-fifa → tendency → L-BFGS-B 拟合 12 参数 → 自动更新 calibrated-model.json。替代手动调参 |
 | `scripts/run-score-odds-pipeline.sh` | fetch + apply 二合一 wrapper |
+| `scripts/generate-betting-report.py` | ❌ 尚未创建。竞彩推荐报告（Markdown + HTML）需此脚本 |
 
 **使用原则：**
 - 这些数据**不是**预测模型的特征输入，仅作为 LLM 撰写报告时的背景上下文

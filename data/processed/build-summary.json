@@ -2,8 +2,8 @@
   "inputPath": "data/results.csv",
   "outDir": "data/processed",
   "firstMatchDate": "1872-11-30",
-  "lastMatchDate": "2026-06-13",
-  "matches": 49265,
+  "lastMatchDate": "2026-06-14",
+  "matches": 49267,
   "teams": 336,
   "settings": {
     "initialElo": 1500,
@@ -146,22 +146,41 @@
     },
     {
       "team": "Netherlands",
-      "elo": 2022.54,
+      "elo": 2020.43,
       "recentForm": {
         "matches": 10,
-        "wins": 7,
-        "draws": 3,
+        "wins": 6,
+        "draws": 4,
         "losses": 0,
         "goalsFor": 30,
-        "goalsAgainst": 6,
-        "points": 24,
-        "winRate": 0.7,
-        "pointsPerMatch": 2.4,
-        "goalDiffPerMatch": 2.4,
-        "cleanSheetRate": 0.5,
-        "formScore": 0.675
+        "goalsAgainst": 8,
+        "points": 22,
+        "winRate": 0.6,
+        "pointsPerMatch": 2.2,
+        "goalDiffPerMatch": 2.2,
+        "cleanSheetRate": 0.4,
+        "formScore": 0.585
       },
-      "matches": 877
+      "matches": 878
+    },
+    {
+      "team": "Germany",
+      "elo": 2013.42,
+      "recentForm": {
+        "matches": 10,
+        "wins": 8,
+        "draws": 0,
+        "losses": 2,
+        "goalsFor": 29,
+        "goalsAgainst": 10,
+        "points": 24,
+        "winRate": 0.8,
+        "pointsPerMatch": 2.4,
+        "goalDiffPerMatch": 1.9,
+        "cleanSheetRate": 0.4,
+        "formScore": 0.65
+      },
+      "matches": 1030
     },
     {
       "team": "Ecuador",
@@ -183,42 +202,23 @@
       "matches": 589
     },
     {
-      "team": "Germany",
-      "elo": 2001.18,
-      "recentForm": {
-        "matches": 10,
-        "wins": 7,
-        "draws": 0,
-        "losses": 3,
-        "goalsFor": 23,
-        "goalsAgainst": 11,
-        "points": 21,
-        "winRate": 0.7,
-        "pointsPerMatch": 2.1,
-        "goalDiffPerMatch": 1.2,
-        "cleanSheetRate": 0.4,
-        "formScore": 0.425
-      },
-      "matches": 1029
-    },
-    {
       "team": "Japan",
-      "elo": 1998.06,
+      "elo": 2000.17,
       "recentForm": {
         "matches": 10,
         "wins": 6,
-        "draws": 2,
-        "losses": 2,
-        "goalsFor": 18,
-        "goalsAgainst": 7,
-        "points": 20,
+        "draws": 3,
+        "losses": 1,
+        "goalsFor": 20,
+        "goalsAgainst": 8,
+        "points": 21,
         "winRate": 0.6,
-        "pointsPerMatch": 2,
-        "goalDiffPerMatch": 1.1,
+        "pointsPerMatch": 2.1,
+        "goalDiffPerMatch": 1.2,
         "cleanSheetRate": 0.6,
-        "formScore": 0.39
+        "formScore": 0.445
       },
-      "matches": 789
+      "matches": 790
     },
     {
       "team": "Morocco",

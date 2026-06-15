@@ -1,27 +1,27 @@
 {
-  "version": "elo-fifa-tendency-robust-modern-2026-05-20",
+  "version": "elo-fifa-tendency-recalibrated-2026-06-15",
   "trainedOn": {
     "since": "1994-01-01",
     "trainUntil": "2021-12-31",
     "validation": "2022-01-01 to 2026-03-31",
-    "validationLogLoss": 0.872836,
-    "validationBrierScore": 0.513446,
-    "validationAccuracy": 0.599864,
+    "validationLogLoss": 0.875438,
+    "validationBrierScore": 0.515918,
+    "validationAccuracy": 0.594099,
     "rollingWindow": 30
   },
   "params": {
-    "eloCoef": 0.315051,
-    "fifaCoef": 0.035,
-    "formCoef": -0.005,
-    "winTendencyCoef": -0.949043,
-    "gdTendencyCoef": 0.139084,
-    "homeCoef": 0.341845,
-    "drawBias": -0.03,
-    "drawEloPenalty": 0.025,
-    "drawFifaPenalty": 0,
-    "drawFormPenalty": 0,
-    "drawTendencyCoef": 1.413384,
-    "drawNeutralBoost": 0.0039
+    "eloCoef": 0.349778,
+    "fifaCoef": 0.013673,
+    "formCoef": -0.068434,
+    "winTendencyCoef": -0.851663,
+    "gdTendencyCoef": 0.123867,
+    "homeCoef": 0.420229,
+    "drawBias": -0.202791,
+    "drawEloPenalty": 0.060391,
+    "drawFifaPenalty": 0.002504,
+    "drawFormPenalty": 0.049227,
+    "drawTendencyCoef": 0.290229,
+    "drawNeutralBoost": 0.100856
   },
   "externalFeatureBlend": {
     "odds": 0.25,
@@ -29,13 +29,10 @@
     "marketValue": 0.07
   },
   "notes": [
-    "Robust modern update adopted after constrained search: validation improved while train Log Loss stayed essentially flat.",
-    "FIFA is now a moderate supporting signal in the modern-era fit, but Elo remains the main baseline strength feature.",
-    "Rolling draw tendency improved validation Log Loss and Brier Score.",
-    "Odds are blended as a pre-match market correction when available, not fitted from historical odds yet.",
-    "2026-06-15 HOTFIX v1: drawBias -0.15→-0.10, predictedScore threshold 0.28→0.25. Effect: predicted 1-1 from 0→10 matches.",
-    "2026-06-15 HOTFIX v2: drawBias -0.10→-0.03, drawEloPenalty 0.045→0.025, odds blend 0.35→0.25. Rationale: 10 completed matches 40% draw rate, model 0% draw direction prediction. Market odds compress draws → reduced odds influence + freed draw logit constraints."
-    ,
-    "Previous conservative default was elo-fifa-tendency-conservative-2026-05-19 with validation Log Loss 0.876161."
+    "Recalibrated 2026-06-15 via scripts/recalibrate-model.py on 22462 training + 4033 validation matches.",
+    "Validation: LogLoss=0.875438, Brier=0.515918, Acc=0.594099",
+    "Actual draw rate 23.7% \u2192 predicted draw mean 22.69%",
+    "Previous v2 hotfix (drawBias=-0.03) was over-predicting draws at 31.9% on validation; optimizer corrected to 22.7%.",
+    "Full parameter list optimized via L-BFGS-B with L2 regularization (\u03bb=0.001)."
   ]
 }

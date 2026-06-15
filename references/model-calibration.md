@@ -79,6 +79,53 @@ probabilities = softmax(home_strength, draw_logit, away_strength)
 
 ## 下一步校准
 
+### 完整逻辑回归重拟合链路（2026-06-15 新增）
+
+当需要在线更新所有 12 个模型参数时，使用此链路而非手动调参：
+
+```bash
+# 1. 确保赛果已写入 results.csv
+node scripts/sync-worldcup-results.mjs
+
+# 2. 重建特征
+node scripts/build-elo-form.mjs --input data/results.csv --outDir data/processed
+node scripts/merge-fifa-features.mjs --matches data/processed/match-features.csv --output data/processed/match-features-fifa.csv
+node scripts/build-rolling-tendency-features.mjs --input data/processed/match-features-fifa.csv --output data/processed/match-features-tendency.csv
+
+# 3. 逻辑回归拟合（L-BFGS-B on 27K matches）
+python3 scripts/recalibrate-model.py
+# → 更新 config/calibrated-model.json
+# → 输出 output/recalibration-result.json
+```
+
+⚠️ **不要手动调 drawBias/drawEloPenalty/homeCoef。** 手动调参在小样本上极易 overfit。2026-06-15 将 drawBias 从 -0.15 调到 -0.03 后，验证集平局预测飙到 31.9%（实际 23.7%），优化器纠正回了 -0.203。
+
+### 最新重拟合结果（2026-06-15）
+
+数据集：22642 训练 (1994–2021) + 4033 验证 (2022-01-01 to 2026-03-31)
+
+| 参数 | 初始(v2) | 最优 | Δ |
+|:---|---:|---:|---:|
+| eloCoef | 0.315051 | 0.349778 | +0.035 |
+| fifaCoef | 0.035000 | 0.013673 | -0.021 |
+| formCoef | -0.005000 | -0.068434 | -0.063 |
+| winTendencyCoef | -0.949043 | -0.851663 | +0.097 |
+| gdTendencyCoef | 0.139084 | 0.123867 | -0.015 |
+| homeCoef | 0.341845 | 0.420229 | +0.078 |
+| **drawBias** | **-0.03** | **-0.202791** | **-0.173** |
+| drawEloPenalty | 0.025 | 0.060391 | +0.035 |
+| drawFifaPenalty | 0.0 | 0.002504 | +0.003 |
+| drawFormPenalty | 0.0 | 0.049227 | +0.049 |
+| drawTendencyCoef | 1.413384 | 0.290229 | -1.123 |
+| **drawNeutralBoost** | **0.0039** | **0.100856** | **+0.097** |
+
+| 指标 | 初始(v2) | 最优 | 改善 |
+|:---|---:|---:|:---|
+| Val Log Loss | 0.889599 | 0.875438 | -0.014 ✅ |
+| Val Brier | 0.525216 | 0.515918 | -0.009 ✅ |
+| Val Accuracy | 0.5646 | 0.5941 | +2.9pp ✅ |
+| 平局预测均值 | 31.9% | 22.7% | ✅ 校准到实际 23.7% |
+
 ### 加入 FIFA 积分
 
 第二个拟合模型：

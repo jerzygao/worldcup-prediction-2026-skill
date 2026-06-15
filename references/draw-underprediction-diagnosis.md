@@ -49,6 +49,19 @@ grep neutral data/manual/wc26-official-group-stage.csv
 - 效果: predictedScore=1-1 0→10场
 
 ### v2 (2026-06-15)
+- drawBias: -0.10 → -0.03, drawEloPenalty: 0.045→0.025
+- odds 融合权重: 0.35→0.25
+- 效果: predictedScore=1-1 10→20场, 平局均值 21.9%
+- ⚠️ **后续验证发现 overfit**: 在 4033 场验证集上平局预测均值 31.9%（实际 23.7%）
+
+### 完整重拟合 (2026-06-15) — 最终版本
+- 工具: `scripts/recalibrate-model.py`（L-BFGS-B, λ=0.001）
+- 数据: 22462 训练 (1994–2021) + 4033 验证 (2022–2026)
+- 结果: drawBias=-0.203, drawNeutralBoost=0.101, 平局预测均值 22.7%
+- Val Log Loss: 0.8896→0.8754, Val Acc: 56.5%→59.4%
+- **核心教训: 手动追赛果调参不可靠，必须上完整重拟合**
+
+### v2 (2026-06-15)
 - drawBias: -0.10 → -0.03
 - drawEloPenalty: 0.045 → 0.025
 - externalFeatureBlend.odds: 0.35 → 0.25

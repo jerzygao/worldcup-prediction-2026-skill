@@ -644,7 +644,7 @@ bash scripts/run-score-odds-pipeline.sh
 
 **定时任务：** 每天北京时间 10:00 自动执行（cron ID: 80d61678234b），调用 `run-score-odds-pipeline.sh`。
 
-**⚠️ 2026-06-15：** `generate-betting-report.py` 尚未创建，竞彩推荐报告生成步骤需跳过。数据拉取+合并已完成。
+**⚠️ 2026-06-15 已创建：** `generate-betting-report.py` 已创建，输出 `output/jingcai-betting-report.md`（12 场，含 SPF、让球、波胆 Top3、过关方案）。`generate-pipeline-report.py` 已创建，输出 `reports/YYYYMMDD/2026-worldcup-prediction-report.md`（含历史预测+未来预测+体彩推荐完整章节）。
 
 ### 数据文件
 
@@ -679,7 +679,7 @@ bash scripts/run-score-odds-pipeline.sh
 | `scripts/fetch-jingcai-odds.py` | ⭐ 拉取竞彩数据（波胆31种比分赔率 + 让球胜平负3方向赔率）。2026-06-15 创建，处理嵌套 API 结构（matchInfoList→subMatchList）和 SSL/WAF 问题 |
 | `scripts/recalibrate-model.py` | ⭐ 完整逻辑回归重拟合：build-elo-form → merge-fifa → tendency → L-BFGS-B 拟合 12 参数 → 自动更新 calibrated-model.json。替代手动调参 |
 | `scripts/run-score-odds-pipeline.sh` | fetch + apply 二合一 wrapper |
-| `scripts/generate-betting-report.py` | ❌ 尚未创建。竞彩推荐报告（Markdown + HTML）需此脚本 |
+| `scripts/generate-betting-report.py` | ✅ 竞彩推荐报告（SPF + 让球 + 波胆 Top3 + 过关方案），输出 `output/jingcai-betting-report.md` |
 
 **使用原则：**
 - 这些数据**不是**预测模型的特征输入，仅作为 LLM 撰写报告时的背景上下文

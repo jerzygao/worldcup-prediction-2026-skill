@@ -15,6 +15,10 @@ JC_ODDS = os.path.join(BASE, "data", "jingcai-odds.json")
 
 TODAY = datetime.now().strftime("%Y%m%d")
 REPORT_DIR = os.path.join(BASE, f"reports/{TODAY}")
+OPENWORK_DIR = os.path.expanduser(f"~/open-workspace/worldcup-prediction/reports/{TODAY}")
+os.makedirs(REPORT_DIR, exist_ok=True)
+os.makedirs(OPENWORK_DIR, exist_ok=True)
+os.makedirs(os.path.join(OPENWORK_DIR, "images"), exist_ok=True)
 REPORT = os.path.join(REPORT_DIR, "2026-worldcup-prediction-report.md")
 
 # === 队名映射 ===
@@ -287,10 +291,14 @@ def main():
     lines.append("- 🔴爆冷风险：市场赔率与模型方向存在显著分歧")
     lines.append("- 泊松:平XX%：泊松xG模型给出较高平局概率的分歧信号")
 
-    os.makedirs(REPORT_DIR, exist_ok=True)
     with open(REPORT, "w") as f:
         f.write("\n".join(lines))
+    # Also copy to open-workspace
+    openwork_md = os.path.join(OPENWORK_DIR, "2026-worldcup-prediction-report.md")
+    with open(openwork_md, "w") as f:
+        f.write("\n".join(lines))
     print(f"报告已生成: {REPORT}")
+    print(f"同步到: {openwork_md}")
     print(f"共 {len(lines)} 行")
 
 if __name__ == "__main__":

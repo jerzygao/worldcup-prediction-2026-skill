@@ -1,116 +1,44 @@
 date,homeTeam,awayTeam,bookmaker,homeOdds,drawOdds,awayOdds,timestamp,sourceUrl
 2026-06-11,Mexico,South Africa,the-odds-api consensus average,1.4161,4.4314,8.5508,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-13,Qatar,Switzerland,the-odds-api consensus average,14.2147,6.6602,1.2080,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-13,Brazil,Morocco,the-odds-api consensus average,1.6463,3.7906,5.5192,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-14,Germany,Curaçao,the-odds-api consensus average,1.0382,17.8662,45.3573,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-14,Netherlands,Japan,the-odds-api consensus average,2.0343,3.4923,3.6615,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-14,Ivory Coast,Ecuador,the-odds-api consensus average,3.5544,2.8227,2.4106,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-15,Spain,Cape Verde,the-odds-api consensus average,1.0860,11.3527,26.5710,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-15,Belgium,Egypt,the-odds-api consensus average,1.6440,3.8569,5.4352,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-15,Saudi Arabia,Uruguay,the-odds-api consensus average,7.7110,4.4196,1.4350,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-16,France,Senegal,the-odds-api consensus average,1.4581,4.4060,7.2455,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-16,Iraq,Norway,the-odds-api consensus average,14.2334,6.8719,1.2013,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-17,Portugal,DR Congo,the-odds-api consensus average,1.2798,5.6367,10.8649,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-17,England,Croatia,the-odds-api consensus average,1.7236,3.7571,4.8807,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-17,Ghana,Panama,the-odds-api consensus average,2.0802,3.4200,3.5867,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-18,Czech Republic,South Africa,the-odds-api consensus average,1.9573,3.3070,4.1084,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-18,Canada,Qatar,the-odds-api consensus average,1.3016,5.1725,10.6355,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-19,Scotland,Morocco,the-odds-api consensus average,4.0752,3.2718,1.9743,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-20,Netherlands,Sweden,the-odds-api consensus average,1.6345,3.9538,5.1486,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-20,Germany,Ivory Coast,the-odds-api consensus average,1.5486,4.2235,5.6077,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-21,Spain,Saudi Arabia,the-odds-api consensus average,1.1053,9.4360,23.3714,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-21,Belgium,Iran,the-odds-api consensus average,1.3948,4.6202,7.9843,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-21,Uruguay,Cape Verde,the-odds-api consensus average,1.4328,4.4130,7.2826,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-22,Argentina,Austria,the-odds-api consensus average,1.6356,3.8267,5.3670,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-22,France,Iraq,the-odds-api consensus average,1.1144,8.6698,23.6722,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-23,Portugal,Uzbekistan,the-odds-api consensus average,1.2407,6.0988,11.2383,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-23,England,Ghana,the-odds-api consensus average,1.3140,5.2517,9.3529,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-23,Panama,Croatia,the-odds-api consensus average,6.5307,3.9374,1.5314,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-24,Canada,Switzerland,the-odds-api consensus average,3.4790,3.2800,2.1128,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-24,Scotland,Brazil,the-odds-api consensus average,6.6915,4.4671,1.4465,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-24,Morocco,Haiti,the-odds-api consensus average,1.3203,5.0159,9.4579,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-25,Curaçao,Ivory Coast,the-odds-api consensus average,13.1155,6.0191,1.2194,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-25,Ecuador,Germany,the-odds-api consensus average,4.7579,3.7421,1.7094,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-25,Japan,Sweden,the-odds-api consensus average,2.0636,3.3752,3.5267,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-25,Tunisia,Netherlands,the-odds-api consensus average,6.3976,4.1964,1.4933,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-26,Norway,France,the-odds-api consensus average,4.2594,3.5727,1.8103,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-26,Senegal,Iraq,the-odds-api consensus average,1.4155,4.3839,7.5648,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-27,Croatia,Ghana,the-odds-api consensus average,1.6445,3.7170,5.3658,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-27,Panama,England,the-odds-api consensus average,9.6585,5.7200,1.2739,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-27,Colombia,Portugal,the-odds-api consensus average,3.4729,3.2715,2.1094,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-27,DR Congo,Uzbekistan,the-odds-api consensus average,2.3147,3.2103,3.1029,2026-06-11T06:03:27.241Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
-2026-06-11,South Korea,Czech Republic,titan007 consensus average,2.6945,3.0886,2.7918,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906754.js
-2026-06-12,Canada,Bosnia and Herzegovina,titan007 consensus average,1.8087,3.5356,4.589,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906756.js
-2026-06-12,United States,Paraguay,titan007 consensus average,1.9447,3.4021,4.0165,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906706.js
-2026-06-13,Qatar,Switzerland,titan007 consensus average,12.5482,6.2408,1.2297,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906707.js
-2026-06-13,Brazil,Morocco,titan007 consensus average,1.6347,3.782,5.4848,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906710.js
-2026-06-13,Haiti,Scotland,titan007 consensus average,6.1409,4.3071,1.5104,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906711.js
-2026-06-13,Australia,Turkey,titan007 consensus average,5.0021,3.7148,1.7058,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906757.js
-2026-06-14,Germany,Curaçao,titan007 consensus average,1.033,16.8414,42.3619,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906713.js
-2026-06-14,Ivory Coast,Ecuador,titan007 consensus average,3.4863,2.8372,2.3858,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906712.js
-2026-06-14,Netherlands,Japan,titan007 consensus average,2.0006,3.5105,3.6373,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906714.js
-2026-06-14,Sweden,Tunisia,titan007 consensus average,1.8997,3.3772,4.2601,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906758.js
-2026-06-15,Belgium,Egypt,titan007 consensus average,1.6364,3.8631,5.2657,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906720.js
-2026-06-15,Iran,New Zealand,titan007 consensus average,1.8017,3.4834,4.6135,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906721.js
-2026-06-15,Spain,Cape Verde,titan007 consensus average,1.0842,10.5485,26.2486,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906725.js
-2026-06-15,Saudi Arabia,Uruguay,titan007 consensus average,7.2898,4.2918,1.4566,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906723.js
-2026-06-16,France,Senegal,titan007 consensus average,1.4554,4.3453,7.033,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906727.js
-2026-06-16,Iraq,Norway,titan007 consensus average,13.3478,6.6165,1.2076,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906749.js
-2026-06-16,Argentina,Algeria,titan007 consensus average,1.3851,4.5138,8.5325,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906728.js
-2026-06-16,Austria,Jordan,titan007 consensus average,1.3171,5.3199,8.8944,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906741.js
-2026-06-17,Portugal,DR Congo,titan007 consensus average,1.2754,5.5614,10.7253,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906748.js
-2026-06-17,Uzbekistan,Colombia,titan007 consensus average,8.415,4.5348,1.388,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906742.js
-2026-06-17,England,Croatia,titan007 consensus average,1.7091,3.7401,4.8201,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906745.js
-2026-06-17,Ghana,Panama,titan007 consensus average,2.0481,3.4207,3.5686,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906746.js
-2026-06-18,Czech Republic,South Africa,titan007 consensus average,1.9455,3.2881,4.081,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907339.js
-2026-06-18,Mexico,South Korea,titan007 consensus average,1.7983,3.4948,4.5176,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906943.js
-2026-06-18,Switzerland,Bosnia and Herzegovina,titan007 consensus average,1.599,3.9053,5.4796,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907340.js
-2026-06-18,Canada,Qatar,titan007 consensus average,1.3066,5.0074,10.1912,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906945.js
-2026-06-19,Scotland,Morocco,titan007 consensus average,4.0404,3.2408,1.9681,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906948.js
-2026-06-19,Brazil,Haiti,titan007 consensus average,1.0697,11.124,29.6448,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906947.js
-2026-06-19,United States,Australia,titan007 consensus average,1.7279,3.7901,4.5218,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906951.js
-2026-06-19,Turkey,Paraguay,titan007 consensus average,2.2107,3.1483,3.3939,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907341.js
-2026-06-20,Germany,Ivory Coast,titan007 consensus average,1.5413,4.2069,5.5862,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906954.js
-2026-06-20,Ecuador,Curaçao,titan007 consensus average,1.1953,6.5722,13.7053,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906953.js
-2026-06-20,Netherlands,Sweden,titan007 consensus average,1.6303,3.9543,5.0573,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907357.js
-2026-06-20,Tunisia,Japan,titan007 consensus average,5.1159,3.5236,1.7088,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906957.js
-2026-06-21,Belgium,Iran,titan007 consensus average,1.3949,4.5634,7.6959,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906959.js
-2026-06-21,New Zealand,Egypt,titan007 consensus average,4.7476,3.6642,1.7259,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906960.js
-2026-06-21,Spain,Saudi Arabia,titan007 consensus average,1.1019,9.1392,22.2948,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906963.js
-2026-06-21,Uruguay,Cape Verde,titan007 consensus average,1.4272,4.4241,7.2502,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906964.js
-2026-06-22,France,Iraq,titan007 consensus average,1.1144,8.3381,23.3446,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907359.js
-2026-06-22,Norway,Senegal,titan007 consensus average,2.1075,3.4367,3.3413,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906967.js
-2026-06-22,Argentina,Austria,titan007 consensus average,1.6333,3.7435,5.3702,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906969.js
-2026-06-22,Jordan,Algeria,titan007 consensus average,6.271,4.0946,1.5138,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906970.js
-2026-06-23,Portugal,Uzbekistan,titan007 consensus average,1.2374,6.0617,11.1328,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906973.js
-2026-06-23,Colombia,DR Congo,titan007 consensus average,1.4567,4.1184,7.2878,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907361.js
-2026-06-23,England,Ghana,titan007 consensus average,1.3045,5.2313,9.3411,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906975.js
-2026-06-23,Panama,Croatia,titan007 consensus average,6.4909,3.8826,1.5283,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906976.js
-2026-06-24,Mexico,Czech Republic,titan007 consensus average,4.4523,3.4925,1.8059,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907367.js
-2026-06-24,South Africa,South Korea,titan007 consensus average,3.9513,3.3531,1.9423,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906944.js
-2026-06-24,Canada,Switzerland,titan007 consensus average,2.1075,3.2943,3.4827,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906946.js
-2026-06-24,Bosnia and Herzegovina,Qatar,titan007 consensus average,1.5895,3.8093,5.8029,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907368.js
-2026-06-24,Scotland,Brazil,titan007 consensus average,6.7006,4.5869,1.436,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906949.js
-2026-06-24,Morocco,Haiti,titan007 consensus average,1.3192,5.0447,9.4457,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906950.js
-2026-06-25,United States,Turkey,titan007 consensus average,2.6242,3.4455,2.5338,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907370.js
-2026-06-25,Paraguay,Australia,titan007 consensus average,2.1716,3.1919,3.4546,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906952.js
-2026-06-25,Curaçao,Ivory Coast,titan007 consensus average,12.7169,6.0804,1.2196,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906955.js
-2026-06-25,Ecuador,Germany,titan007 consensus average,4.8254,3.7825,1.701,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906956.js
-2026-06-25,Japan,Sweden,titan007 consensus average,2.0838,3.3586,3.4852,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907369.js
-2026-06-25,Tunisia,Netherlands,titan007 consensus average,6.3691,4.2134,1.4959,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906958.js
-2026-06-26,Egypt,Iran,titan007 consensus average,2.236,2.9838,3.5141,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906961.js
-2026-06-26,New Zealand,Belgium,titan007 consensus average,9.7859,5.5404,1.2753,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906962.js
-2026-06-26,Cape Verde,Saudi Arabia,titan007 consensus average,2.5483,3.2556,2.7253,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906965.js
-2026-06-26,Uruguay,Spain,titan007 consensus average,5.1855,3.8891,1.6229,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906966.js
-2026-06-26,Norway,France,titan007 consensus average,4.2809,3.5684,1.812,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906968.js
-2026-06-26,Senegal,Iraq,titan007 consensus average,1.416,4.443,7.5154,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907372.js
-2026-06-27,Algeria,Austria,titan007 consensus average,3.5882,3.1254,2.1479,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906971.js
-2026-06-27,Jordan,Argentina,titan007 consensus average,13.8828,6.7949,1.1852,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906972.js
-2026-06-27,Colombia,Portugal,titan007 consensus average,3.474,3.278,2.1148,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906974.js
-2026-06-27,DR Congo,Uzbekistan,titan007 consensus average,2.318,3.2634,3.0581,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2907374.js
-2026-06-27,Panama,England,titan007 consensus average,9.3379,5.9832,1.2717,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906978.js
-2026-06-27,Croatia,Ghana,titan007 consensus average,1.6399,3.7234,5.3027,2026-06-11T05:37:50.932Z,https://1x2d.titan007.com/2906977.js
-2026-06-11,Mexico,South Africa,titan007 consensus average,1.4342,4.3462,8.0003,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2906701.js
+2026-06-13,Qatar,Switzerland,the-odds-api consensus average,14.3635,6.4350,1.2144,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-13,Brazil,Morocco,the-odds-api consensus average,1.6713,3.7815,5.3685,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-14,Germany,Curaçao,the-odds-api consensus average,1.0413,17.6591,40.6181,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-14,Netherlands,Japan,the-odds-api consensus average,1.9794,3.5596,3.7609,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-14,Ivory Coast,Ecuador,the-odds-api consensus average,3.5808,2.8065,2.4038,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-15,Spain,Cape Verde,the-odds-api consensus average,1.0889,11.2664,26.1632,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-15,Belgium,Egypt,the-odds-api consensus average,1.6117,3.9394,5.6836,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-15,Saudi Arabia,Uruguay,the-odds-api consensus average,8.0823,4.4787,1.4200,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-16,France,Senegal,the-odds-api consensus average,1.4651,4.3762,7.2304,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-16,Iraq,Norway,the-odds-api consensus average,14.4562,6.9628,1.1977,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-17,Portugal,DR Congo,the-odds-api consensus average,1.2804,5.6476,10.8522,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-17,England,Croatia,the-odds-api consensus average,1.7236,3.7583,4.9217,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-17,Ghana,Panama,the-odds-api consensus average,2.1537,3.3687,3.4533,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-18,Czech Republic,South Africa,the-odds-api consensus average,1.7418,3.7616,4.6680,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-18,Canada,Qatar,the-odds-api consensus average,1.2944,5.2867,10.6265,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-19,Scotland,Morocco,the-odds-api consensus average,4.1255,3.2877,1.9573,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-20,Netherlands,Sweden,the-odds-api consensus average,1.6286,3.9683,5.1855,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-20,Germany,Ivory Coast,the-odds-api consensus average,1.5347,4.2749,5.7179,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-21,Spain,Saudi Arabia,the-odds-api consensus average,1.0998,9.7102,23.4869,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-21,Belgium,Iran,the-odds-api consensus average,1.3972,4.6360,7.8788,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-21,Uruguay,Cape Verde,the-odds-api consensus average,1.4314,4.4414,7.3305,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-22,Argentina,Austria,the-odds-api consensus average,1.6237,3.8465,5.4567,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-22,France,Iraq,the-odds-api consensus average,1.1117,8.8838,23.8074,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-23,Portugal,Uzbekistan,the-odds-api consensus average,1.2381,6.1274,11.1388,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-23,England,Ghana,the-odds-api consensus average,1.3149,5.2337,9.3549,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-23,Panama,Croatia,the-odds-api consensus average,6.4251,3.8870,1.5430,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-24,Canada,Switzerland,the-odds-api consensus average,3.4814,3.2946,2.1016,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-24,Scotland,Brazil,the-odds-api consensus average,6.7119,4.4941,1.4389,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-24,Morocco,Haiti,the-odds-api consensus average,1.3292,4.9935,9.1214,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-25,Curaçao,Ivory Coast,the-odds-api consensus average,12.9870,6.0748,1.2179,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-25,Ecuador,Germany,the-odds-api consensus average,4.7030,3.7227,1.7173,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-25,Japan,Sweden,the-odds-api consensus average,2.0742,3.3676,3.5045,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-25,Tunisia,Netherlands,the-odds-api consensus average,6.3642,4.2179,1.4927,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-26,Norway,France,the-odds-api consensus average,4.2488,3.5745,1.8112,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-26,Senegal,Iraq,the-odds-api consensus average,1.4048,4.4488,7.7373,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-27,Croatia,Ghana,the-odds-api consensus average,1.6352,3.7224,5.4264,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-27,Panama,England,the-odds-api consensus average,9.6124,5.7942,1.2739,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-27,Colombia,Portugal,the-odds-api consensus average,3.4712,3.2773,2.1115,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
+2026-06-27,DR Congo,Uzbekistan,the-odds-api consensus average,2.3058,3.2130,3.1085,2026-06-13T02:12:35.027Z,https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds
 2026-06-11,South Korea,Czech Republic,titan007 consensus average,2.6987,3.0914,2.7919,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2906754.js
 2026-06-12,Canada,Bosnia and Herzegovina,titan007 consensus average,1.8115,3.534,4.5763,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2906756.js
 2026-06-12,United States,Paraguay,titan007 consensus average,1.946,3.4007,4.0148,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2906706.js
@@ -182,3 +110,76 @@ date,homeTeam,awayTeam,bookmaker,homeOdds,drawOdds,awayOdds,timestamp,sourceUrl
 2026-06-27,DR Congo,Uzbekistan,titan007 consensus average,2.318,3.2634,3.0581,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2907374.js
 2026-06-27,Panama,England,titan007 consensus average,9.3256,5.9898,1.2722,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2906978.js
 2026-06-27,Croatia,Ghana,titan007 consensus average,1.64,3.7242,5.3024,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2906977.js
+2026-06-11,Mexico,South Africa,titan007 consensus average,1.4342,4.3462,8.0003,2026-06-11T06:04:02.855Z,https://1x2d.titan007.com/2906701.js
+2026-06-11,Mexico,South Africa,titan007 consensus average,1.4368,4.3272,8.1098,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906701.js
+2026-06-11,South Korea,Czech Republic,titan007 consensus average,2.5784,3.0697,2.9648,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906754.js
+2026-06-12,Canada,Bosnia and Herzegovina,titan007 consensus average,1.8289,3.4891,4.621,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906756.js
+2026-06-12,United States,Paraguay,titan007 consensus average,2.0323,3.2691,3.9208,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906706.js
+2026-06-13,Qatar,Switzerland,titan007 consensus average,12.9981,6.1614,1.2317,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906707.js
+2026-06-13,Brazil,Morocco,titan007 consensus average,1.6518,3.7785,5.4291,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906710.js
+2026-06-13,Haiti,Scotland,titan007 consensus average,6.0121,4.2877,1.5314,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906711.js
+2026-06-13,Australia,Turkey,titan007 consensus average,4.941,3.6976,1.7249,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906757.js
+2026-06-14,Germany,Curaçao,titan007 consensus average,1.0364,16.8106,40.1989,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906713.js
+2026-06-14,Ivory Coast,Ecuador,titan007 consensus average,3.5283,2.8389,2.3834,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906712.js
+2026-06-14,Netherlands,Japan,titan007 consensus average,1.9812,3.5423,3.7088,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906714.js
+2026-06-14,Sweden,Tunisia,titan007 consensus average,1.8894,3.4304,4.2839,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906758.js
+2026-06-15,Belgium,Egypt,titan007 consensus average,1.6089,3.9217,5.5298,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906720.js
+2026-06-15,Iran,New Zealand,titan007 consensus average,1.8025,3.4763,4.6741,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906721.js
+2026-06-15,Spain,Cape Verde,titan007 consensus average,1.0845,10.6976,26.2352,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906725.js
+2026-06-15,Saudi Arabia,Uruguay,titan007 consensus average,7.4614,4.3307,1.4517,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906723.js
+2026-06-16,France,Senegal,titan007 consensus average,1.4554,4.3497,7.0975,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906727.js
+2026-06-16,Iraq,Norway,titan007 consensus average,13.3479,6.695,1.2056,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906749.js
+2026-06-16,Argentina,Algeria,titan007 consensus average,1.3864,4.5264,8.5989,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906728.js
+2026-06-16,Austria,Jordan,titan007 consensus average,1.322,5.3077,8.7693,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906741.js
+2026-06-17,Portugal,DR Congo,titan007 consensus average,1.2784,5.5642,10.6785,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906748.js
+2026-06-17,Uzbekistan,Colombia,titan007 consensus average,8.5025,4.5673,1.3845,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906742.js
+2026-06-17,England,Croatia,titan007 consensus average,1.7094,3.7439,4.853,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906745.js
+2026-06-17,Ghana,Panama,titan007 consensus average,2.11,3.3985,3.4494,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906746.js
+2026-06-18,Czech Republic,South Africa,titan007 consensus average,1.7494,3.7083,4.6341,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907339.js
+2026-06-18,Mexico,South Korea,titan007 consensus average,1.9913,3.2841,3.9715,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906943.js
+2026-06-18,Switzerland,Bosnia and Herzegovina,titan007 consensus average,1.5831,3.9625,5.671,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907340.js
+2026-06-18,Canada,Qatar,titan007 consensus average,1.3007,5.1534,10.3221,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906945.js
+2026-06-19,Scotland,Morocco,titan007 consensus average,4.0418,3.2482,1.9744,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906948.js
+2026-06-19,Brazil,Haiti,titan007 consensus average,1.0689,11.5064,29.9121,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906947.js
+2026-06-19,United States,Australia,titan007 consensus average,1.6665,3.9558,4.8525,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906951.js
+2026-06-19,Turkey,Paraguay,titan007 consensus average,2.1218,3.1868,3.6152,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907341.js
+2026-06-20,Germany,Ivory Coast,titan007 consensus average,1.5362,4.2227,5.6276,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906954.js
+2026-06-20,Ecuador,Curaçao,titan007 consensus average,1.1914,6.7001,13.9225,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906953.js
+2026-06-20,Netherlands,Sweden,titan007 consensus average,1.6205,3.967,5.1081,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907357.js
+2026-06-20,Tunisia,Japan,titan007 consensus average,5.2082,3.5444,1.6945,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906957.js
+2026-06-21,Belgium,Iran,titan007 consensus average,1.3952,4.5631,7.707,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906959.js
+2026-06-21,New Zealand,Egypt,titan007 consensus average,4.7193,3.6744,1.7264,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906960.js
+2026-06-21,Spain,Saudi Arabia,titan007 consensus average,1.098,9.3251,23.3295,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906963.js
+2026-06-21,Uruguay,Cape Verde,titan007 consensus average,1.4276,4.4209,7.3055,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906964.js
+2026-06-22,France,Iraq,titan007 consensus average,1.1116,8.5281,23.5338,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907359.js
+2026-06-22,Norway,Senegal,titan007 consensus average,2.1063,3.4429,3.3429,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906967.js
+2026-06-22,Argentina,Austria,titan007 consensus average,1.6219,3.7824,5.4542,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906969.js
+2026-06-22,Jordan,Algeria,titan007 consensus average,6.2932,4.1081,1.5129,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906970.js
+2026-06-23,Portugal,Uzbekistan,titan007 consensus average,1.2343,6.1181,11.1954,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906973.js
+2026-06-23,Colombia,DR Congo,titan007 consensus average,1.457,4.1272,7.2784,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907361.js
+2026-06-23,England,Ghana,titan007 consensus average,1.3081,5.1983,9.2996,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906975.js
+2026-06-23,Panama,Croatia,titan007 consensus average,6.4244,3.8585,1.5389,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906976.js
+2026-06-24,Mexico,Czech Republic,titan007 consensus average,4.3897,3.4708,1.824,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907367.js
+2026-06-24,South Africa,South Korea,titan007 consensus average,5.3769,3.8179,1.6355,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906944.js
+2026-06-24,Canada,Switzerland,titan007 consensus average,2.1029,3.3097,3.4875,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906946.js
+2026-06-24,Bosnia and Herzegovina,Qatar,titan007 consensus average,1.6246,3.7213,5.5721,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907368.js
+2026-06-24,Scotland,Brazil,titan007 consensus average,6.8377,4.6413,1.4235,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906949.js
+2026-06-24,Morocco,Haiti,titan007 consensus average,1.3335,4.9876,8.9769,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906950.js
+2026-06-25,United States,Turkey,titan007 consensus average,2.621,3.4692,2.5449,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907370.js
+2026-06-25,Paraguay,Australia,titan007 consensus average,2.1505,3.2046,3.5056,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906952.js
+2026-06-25,Curaçao,Ivory Coast,titan007 consensus average,12.8126,6.1484,1.2185,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906955.js
+2026-06-25,Ecuador,Germany,titan007 consensus average,4.7463,3.766,1.7153,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906956.js
+2026-06-25,Japan,Sweden,titan007 consensus average,2.0894,3.3621,3.4783,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907369.js
+2026-06-25,Tunisia,Netherlands,titan007 consensus average,6.3581,4.2181,1.4952,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906958.js
+2026-06-26,Egypt,Iran,titan007 consensus average,2.2304,2.9965,3.5284,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906961.js
+2026-06-26,New Zealand,Belgium,titan007 consensus average,9.8534,5.5962,1.2756,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906962.js
+2026-06-26,Cape Verde,Saudi Arabia,titan007 consensus average,2.3152,3.4838,2.9144,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906965.js
+2026-06-26,Uruguay,Spain,titan007 consensus average,5.2025,3.8884,1.6248,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906966.js
+2026-06-26,Norway,France,titan007 consensus average,4.2764,3.5684,1.8152,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906968.js
+2026-06-26,Senegal,Iraq,titan007 consensus average,1.4066,4.5046,7.6962,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907372.js
+2026-06-27,Algeria,Austria,titan007 consensus average,3.5984,3.1211,2.1482,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906971.js
+2026-06-27,Jordan,Argentina,titan007 consensus average,14.3866,6.957,1.1777,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906972.js
+2026-06-27,Colombia,Portugal,titan007 consensus average,3.4707,3.2817,2.1176,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906974.js
+2026-06-27,DR Congo,Uzbekistan,titan007 consensus average,2.3158,3.2698,3.0613,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2907374.js
+2026-06-27,Panama,England,titan007 consensus average,9.4956,6.004,1.2689,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906978.js
+2026-06-27,Croatia,Ghana,titan007 consensus average,1.6343,3.7506,5.3871,2026-06-13T02:13:05.803Z,https://1x2d.titan007.com/2906977.js

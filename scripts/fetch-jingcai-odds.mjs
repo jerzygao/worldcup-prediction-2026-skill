@@ -32,6 +32,21 @@ for (let i = 2; i < process.argv.length; i++) {
   else if (a.startsWith("--out=")) ARGS.out = a.split("=")[1];
 }
 
+function isMatchCompleted(m) {
+  // time 格式："06-12 03:00" (MM-DD HH:MM，北京时间)
+  // 赛程 time 是开赛时间，过了开赛时间+2小时就算已完赛
+  const now = new Date();
+  const m2 = m.time.match(/(\d+)-(\d+)\s+(\d+):(\d+)/);
+  if (!m2) return false;
+  const month = parseInt(m2[1]) - 1; // 0-indexed
+  const day = parseInt(m2[2]);
+  const hour = parseInt(m2[3]);
+  const min = parseInt(m2[4]);
+  const matchDate = new Date(now.getFullYear(), month, day, hour, min);
+  // 比赛约2小时，加上看齐时间，开赛后3小时算已完赛
+  return (now.getTime() - matchDate.getTime()) > 3 * 60 * 60 * 1000;
+}
+
 const NORM = s => (s ?? "").replace(/\s+/g, " ").trim();
 
 function readCSV(path) {
@@ -66,6 +81,11 @@ function main() {
   if (ARGS.onlyWorldCup) matches = matches.filter(m => m.league === "世界杯");
   if (ARGS.date) matches = matches.filter(m => m.date === ARGS.date);
   console.log(`筛选后: ${matches.length} 场`);
+  // 过滤已完赛的场次
+  const beforeFilter = matches.length;
+  matches = matches.filter(m => !isMatchCompleted(m));
+  const removed = beforeFilter - matches.length;
+  if (removed > 0) console.log(`已过滤 ${removed} 场已完赛比赛`);
   if (matches.length === 0) { writeFileSync(ARGS.out, ["# 竞彩推荐方案", "", "当前无可投注的世界杯赛事。", ""].join("\n"), "utf8"); return; }
   const preds = readCSV(ARGS.predFile);
   const ahData = readCSV(ARGS.ahFile);

@@ -109,9 +109,26 @@ function accuracy(rows, weights) {
 }
 
 function predictedScore(probs) {
+  // 平局逻辑
   if (probs.D >= probs.H && probs.D >= probs.A) return "1-1";
-  if (probs.H > probs.A) return probs.H > 0.62 ? "2-0" : "2-1";
-  return probs.A > 0.62 ? "0-2" : "1-2";
+  if (probs.D >= 0.28) return "1-1";
+  if (probs.D >= 0.22 && Math.abs(probs.H - probs.A) < 0.10) return "1-1";
+
+  const isHome = probs.H > probs.A;
+  const fave = isHome ? probs.H : probs.A;
+
+  // 按优势程度映射
+  if (isHome) {
+    if (fave > 0.78) return "3-0";
+    if (fave > 0.65) return "2-0";
+    if (fave > 0.52) return "2-1";
+    return "1-0";
+  } else {
+    if (fave > 0.78) return "0-3";
+    if (fave > 0.65) return "0-2";
+    if (fave > 0.52) return "1-2";
+    return "0-1";
+  }
 }
 
 function confidence(probs) {

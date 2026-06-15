@@ -423,16 +423,32 @@ function predict(home, away, options) {
 }
 
 function predictedScore(probs) {
-  if (probs.draw >= probs.homeWin && probs.draw >= probs.awayWin) return "1-1";
-  const edge = Math.abs(probs.homeWin - probs.awayWin);
-  if (probs.homeWin > probs.awayWin) {
-    if (probs.homeWin > 0.62) return "2-0";
-    if (edge < 0.16) return "2-1";
-    return "1-0";
+  // 平局逻辑
+  if (probs.draw >= probs.homeWin && probs.draw >= probs.awayWin) {
+    if (probs.draw > 0.35) return "1-1";
+    return "1-1";
   }
-  if (probs.awayWin > 0.62) return "0-2";
-  if (edge < 0.16) return "1-2";
-  return "0-1";
+  if (probs.draw >= 0.25) return "1-1";
+  if (probs.draw >= 0.22) {
+    if (Math.abs(probs.homeWin - probs.awayWin) < 0.10) return "1-1";
+  }
+
+  const isHome = probs.homeWin > probs.awayWin;
+  const fave = isHome ? probs.homeWin : probs.awayWin;
+
+  // 按优势程度映射到合适比分
+  // 概率越高 → 进球越多
+  if (isHome) {
+    if (fave > 0.78) return "3-0";
+    if (fave > 0.65) return "2-0";
+    if (fave > 0.52) return "2-1";
+    return "1-0";
+  } else {
+    if (fave > 0.78) return "0-3";
+    if (fave > 0.65) return "0-2";
+    if (fave > 0.52) return "1-2";
+    return "0-1";
+  }
 }
 
 function confidence(probs) {

@@ -40,6 +40,41 @@ ACCOUNT_URL = "https://www.jiajielitong.com"
 AGENT_TEMP_KEY_PATH = "/matches/agent/temp-key"
 TEMP_KEY_CACHE_KEY = "agent_temp_key"
 TEMP_KEY_SAFETY_MARGIN = 60
+
+# File-path for persistent temp-key storage (survives Python process restarts).
+# Relative to this file's parent directory (the script/ dir).
+_TEMP_KEY_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "output", ".agent_temp_key.json")
+
+
+def _temp_key_load() -> Optional[dict]:
+    """Load a previously persisted temp key from disk, or None if stale/missing."""
+    path = os.environ.get("AGENT_TEMP_KEY_FILE", _TEMP_KEY_FILE)
+    if not os.path.isfile(path):
+        return None
+    try:
+        with open(path) as f:
+            data = json.load(f)
+        ts = data.get("_saved_at", 0)
+        # 24h TTL like the in-memory cache
+        if not ts or time.time() - ts > 24 * 3600:
+            return None
+        return data
+    except (OSError, json.JSONDecodeError, ValueError):
+        return None
+
+
+def _temp_key_save(data: dict) -> None:
+    """Persist a temp key dict to disk with a timestamp."""
+    path = os.environ.get("AGENT_TEMP_KEY_FILE", _TEMP_KEY_FILE)
+    try:
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        data["_saved_at"] = time.time()
+        with open(path, "w") as f:
+            json.dump(data, f)
+    except OSError:
+        pass  # non-fatal — in-memory cache still works for the current process
+
+
 FIRST_USE_MODEL_NOTE_EN = (
     "First time using this skill? You can try 2 predictions per day for free "
     "with an Agent temporary key. The backend model combines multiple data "
@@ -116,12 +151,20 @@ def request_agent_temp_key(force: bool = False) -> dict:
     """Request or reuse a 24-hour Agent temporary API key.
 
     The API grants 2 free prediction credits per UTC day for Agent Skill
-    usage. The returned key is cached only in this Python process and is
-    never persisted to disk.
+    usage. The key is cached in memory (process-local) AND persisted to a
+    file in output/ so subsequent process runs can reuse it without
+    burning the daily "one key per IP" quota.
     """
     cached = None if force else _cache_get(TEMP_KEY_CACHE_KEY, 24 * 3600)
     if isinstance(cached, dict) and cached.get("api_key"):
         return cached
+
+    # Try file cache before hitting the API.
+    if not force:
+        file_cached = _temp_key_load()
+        if isinstance(file_cached, dict) and file_cached.get("api_key"):
+            _cache_set(TEMP_KEY_CACHE_KEY, file_cached)
+            return file_cached
 
     data = _request("POST", AGENT_TEMP_KEY_PATH, require_auth=False)
     payload = data.get("data") if isinstance(data.get("data"), dict) else data
@@ -149,6 +192,8 @@ def request_agent_temp_key(force: bool = False) -> dict:
     # Store a second timestamped value with a shorter TTL effect by forcing
     # refresh manually once the safety-adjusted window has elapsed.
     _cache[TEMP_KEY_CACHE_KEY] = (time.time() - max(0, 24 * 3600 - expires_in + TEMP_KEY_SAFETY_MARGIN), normalized)
+    # Persist to disk so subsequent process runs can reuse the same key.
+    _temp_key_save(normalized)
     return normalized
 
 
@@ -324,7 +369,7 @@ def predict_match(
 
     data = _request(
         "POST",
-        "/matches/predict/",
+        "/matches/simulate/",
         payload={
             "home_team": home,
             "visitor_team": away,

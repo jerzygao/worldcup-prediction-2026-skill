@@ -29,6 +29,8 @@ mcporter call sailing-sports-mcp tteagt --args '{"query": "2026年X月X日世界
 python3 scripts/post-match-update.py
 ```
 
+**⚠️ 已知遗漏问题：** 该脚本通过 Sailing MCP 拉取赛果，可能只捕获部分已完赛场次（实测 3 场抓到 2 场）。原因是 Sailing API 按日期窗口查询有延迟或截止时间限制。生成验证报告后必须手动比对已完赛列表完整性，漏掉的比赛手动补行并更新累计准确率。
+
 4. **生成简化报告** — 两章结构（历史预测 + 未来预测），以竞彩赛程为基准
 
 ## 简化报告格式

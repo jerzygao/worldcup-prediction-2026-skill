@@ -76,25 +76,6 @@
     "matches": 1088
   },
   {
-    "team": "Brazil",
-    "elo": 2042.09,
-    "recentForm": {
-      "matches": 10,
-      "wins": 5,
-      "draws": 2,
-      "losses": 3,
-      "goalsFor": 18,
-      "goalsAgainst": 8,
-      "points": 17,
-      "winRate": 0.5,
-      "pointsPerMatch": 1.7,
-      "goalDiffPerMatch": 1,
-      "cleanSheetRate": 0.5,
-      "formScore": 0.245
-    },
-    "matches": 1057
-  },
-  {
     "team": "Portugal",
     "elo": 2041.48,
     "recentForm": {
@@ -112,6 +93,25 @@
       "formScore": 0.485
     },
     "matches": 693
+  },
+  {
+    "team": "Brazil",
+    "elo": 2037.83,
+    "recentForm": {
+      "matches": 10,
+      "wins": 5,
+      "draws": 2,
+      "losses": 3,
+      "goalsFor": 19,
+      "goalsAgainst": 9,
+      "points": 17,
+      "winRate": 0.5,
+      "pointsPerMatch": 1.7,
+      "goalDiffPerMatch": 1,
+      "cleanSheetRate": 0.4,
+      "formScore": 0.235
+    },
+    "matches": 1058
   },
   {
     "team": "Colombia",
@@ -210,22 +210,22 @@
   },
   {
     "team": "Morocco",
-    "elo": 1992.45,
+    "elo": 1996.7,
     "recentForm": {
       "matches": 10,
-      "wins": 7,
-      "draws": 3,
+      "wins": 6,
+      "draws": 4,
       "losses": 0,
-      "goalsFor": 18,
-      "goalsAgainst": 5,
-      "points": 24,
-      "winRate": 0.7,
-      "pointsPerMatch": 2.4,
-      "goalDiffPerMatch": 1.3,
+      "goalsFor": 16,
+      "goalsAgainst": 4,
+      "points": 22,
+      "winRate": 0.6,
+      "pointsPerMatch": 2.2,
+      "goalDiffPerMatch": 1.2,
       "cleanSheetRate": 0.6,
-      "formScore": 0.58
+      "formScore": 0.485
     },
-    "matches": 614
+    "matches": 615
   },
   {
     "team": "Croatia",
@@ -266,6 +266,25 @@
     "matches": 870
   },
   {
+    "team": "Mexico",
+    "elo": 1966.07,
+    "recentForm": {
+      "matches": 10,
+      "wins": 4,
+      "draws": 4,
+      "losses": 2,
+      "goalsFor": 11,
+      "goalsAgainst": 8,
+      "points": 16,
+      "winRate": 0.4,
+      "pointsPerMatch": 1.6,
+      "goalDiffPerMatch": 0.3,
+      "cleanSheetRate": 0.6,
+      "formScore": 0.11
+    },
+    "matches": 1001
+  },
+  {
     "team": "Uruguay",
     "elo": 1960.63,
     "recentForm": {
@@ -285,61 +304,23 @@
     "matches": 970
   },
   {
-    "team": "Turkey",
-    "elo": 1959.15,
+    "team": "Australia",
+    "elo": 1958.47,
     "recentForm": {
       "matches": 10,
       "wins": 7,
-      "draws": 1,
-      "losses": 2,
-      "goalsFor": 21,
-      "goalsAgainst": 14,
-      "points": 22,
-      "winRate": 0.7,
-      "pointsPerMatch": 2.2,
-      "goalDiffPerMatch": 0.7,
-      "cleanSheetRate": 0.3,
-      "formScore": 0.38
-    },
-    "matches": 640
-  },
-  {
-    "team": "Mexico",
-    "elo": 1955.61,
-    "recentForm": {
-      "matches": 10,
-      "wins": 3,
-      "draws": 5,
-      "losses": 2,
-      "goalsFor": 11,
-      "goalsAgainst": 10,
-      "points": 14,
-      "winRate": 0.3,
-      "pointsPerMatch": 1.4,
-      "goalDiffPerMatch": 0.1,
-      "cleanSheetRate": 0.5,
-      "formScore": -0.01
-    },
-    "matches": 1000
-  },
-  {
-    "team": "Switzerland",
-    "elo": 1939.12,
-    "recentForm": {
-      "matches": 10,
-      "wins": 6,
-      "draws": 3,
-      "losses": 1,
-      "goalsFor": 25,
-      "goalsAgainst": 8,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 16,
+      "goalsAgainst": 9,
       "points": 21,
-      "winRate": 0.6,
+      "winRate": 0.7,
       "pointsPerMatch": 2.1,
-      "goalDiffPerMatch": 1.7,
-      "cleanSheetRate": 0.6,
-      "formScore": 0.52
+      "goalDiffPerMatch": 0.7,
+      "cleanSheetRate": 0.4,
+      "formScore": 0.35
     },
-    "matches": 882
+    "matches": 580
   },
   {
     "team": "Denmark",
@@ -418,61 +399,80 @@
     "matches": 636
   },
   {
-    "team": "Paraguay",
-    "elo": 1907.19,
+    "team": "Switzerland",
+    "elo": 1916.08,
     "recentForm": {
       "matches": 10,
-      "wins": 4,
-      "draws": 2,
-      "losses": 4,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "points": 14,
-      "winRate": 0.4,
-      "pointsPerMatch": 1.4,
-      "goalDiffPerMatch": 0,
-      "cleanSheetRate": 0.4,
-      "formScore": -0.035
+      "wins": 5,
+      "draws": 4,
+      "losses": 1,
+      "goalsFor": 22,
+      "goalsAgainst": 7,
+      "points": 19,
+      "winRate": 0.5,
+      "pointsPerMatch": 1.9,
+      "goalDiffPerMatch": 1.5,
+      "cleanSheetRate": 0.6,
+      "formScore": 0.41
     },
-    "matches": 782
+    "matches": 883
   },
   {
-    "team": "Australia",
-    "elo": 1906.74,
+    "team": "United States",
+    "elo": 1907.86,
     "recentForm": {
       "matches": 10,
-      "wins": 7,
-      "draws": 0,
+      "wins": 5,
+      "draws": 1,
+      "losses": 4,
+      "goalsFor": 19,
+      "goalsAgainst": 16,
+      "points": 16,
+      "winRate": 0.5,
+      "pointsPerMatch": 1.6,
+      "goalDiffPerMatch": 0.3,
+      "cleanSheetRate": 0.1,
+      "formScore": 0.06
+    },
+    "matches": 789
+  },
+  {
+    "team": "Turkey",
+    "elo": 1907.41,
+    "recentForm": {
+      "matches": 10,
+      "wins": 6,
+      "draws": 1,
+      "losses": 3,
+      "goalsFor": 19,
+      "goalsAgainst": 15,
+      "points": 19,
+      "winRate": 0.6,
+      "pointsPerMatch": 1.9,
+      "goalDiffPerMatch": 0.4,
+      "cleanSheetRate": 0.3,
+      "formScore": 0.215
+    },
+    "matches": 641
+  },
+  {
+    "team": "South Korea",
+    "elo": 1897.71,
+    "recentForm": {
+      "matches": 10,
+      "wins": 6,
+      "draws": 1,
       "losses": 3,
       "goalsFor": 15,
-      "goalsAgainst": 9,
-      "points": 21,
-      "winRate": 0.7,
-      "pointsPerMatch": 2.1,
-      "goalDiffPerMatch": 0.6,
-      "cleanSheetRate": 0.4,
-      "formScore": 0.335
+      "goalsAgainst": 13,
+      "points": 19,
+      "winRate": 0.6,
+      "pointsPerMatch": 1.9,
+      "goalDiffPerMatch": 0.2,
+      "cleanSheetRate": 0.5,
+      "formScore": 0.205
     },
-    "matches": 579
-  },
-  {
-    "team": "Canada",
-    "elo": 1891.82,
-    "recentForm": {
-      "matches": 10,
-      "wins": 4,
-      "draws": 5,
-      "losses": 1,
-      "goalsFor": 11,
-      "goalsAgainst": 4,
-      "points": 17,
-      "winRate": 0.4,
-      "pointsPerMatch": 1.7,
-      "goalDiffPerMatch": 0.7,
-      "cleanSheetRate": 0.7,
-      "formScore": 0.22
-    },
-    "matches": 467
+    "matches": 1006
   },
   {
     "team": "Austria",
@@ -513,23 +513,23 @@
     "matches": 610
   },
   {
-    "team": "South Korea",
-    "elo": 1875.02,
+    "team": "Canada",
+    "elo": 1870.56,
     "recentForm": {
       "matches": 10,
-      "wins": 6,
-      "draws": 1,
-      "losses": 3,
-      "goalsFor": 15,
-      "goalsAgainst": 12,
-      "points": 19,
-      "winRate": 0.6,
-      "pointsPerMatch": 1.9,
-      "goalDiffPerMatch": 0.3,
+      "wins": 3,
+      "draws": 6,
+      "losses": 1,
+      "goalsFor": 10,
+      "goalsAgainst": 5,
+      "points": 15,
+      "winRate": 0.3,
+      "pointsPerMatch": 1.5,
+      "goalDiffPerMatch": 0.5,
       "cleanSheetRate": 0.6,
-      "formScore": 0.23
+      "formScore": 0.1
     },
-    "matches": 1005
+    "matches": 468
   },
   {
     "team": "Yugoslavia",
@@ -551,23 +551,42 @@
     "matches": 483
   },
   {
-    "team": "United States",
-    "elo": 1856.81,
+    "team": "Scotland",
+    "elo": 1856.16,
     "recentForm": {
       "matches": 10,
-      "wins": 5,
+      "wins": 6,
       "draws": 1,
-      "losses": 4,
-      "goalsFor": 17,
-      "goalsAgainst": 16,
-      "points": 16,
-      "winRate": 0.5,
-      "pointsPerMatch": 1.6,
-      "goalDiffPerMatch": 0.1,
-      "cleanSheetRate": 0.1,
-      "formScore": 0.03
+      "losses": 3,
+      "goalsFor": 18,
+      "goalsAgainst": 9,
+      "points": 19,
+      "winRate": 0.6,
+      "pointsPerMatch": 1.9,
+      "goalDiffPerMatch": 0.9,
+      "cleanSheetRate": 0.4,
+      "formScore": 0.3
     },
-    "matches": 788
+    "matches": 850
+  },
+  {
+    "team": "Paraguay",
+    "elo": 1856.15,
+    "recentForm": {
+      "matches": 10,
+      "wins": 3,
+      "draws": 2,
+      "losses": 5,
+      "goalsFor": 9,
+      "goalsAgainst": 14,
+      "points": 11,
+      "winRate": 0.3,
+      "pointsPerMatch": 1.1,
+      "goalDiffPerMatch": -0.5,
+      "cleanSheetRate": 0.3,
+      "formScore": -0.24
+    },
+    "matches": 783
   },
   {
     "team": "Algeria",
@@ -644,25 +663,6 @@
       "formScore": 0.305
     },
     "matches": 746
-  },
-  {
-    "team": "Scotland",
-    "elo": 1838.51,
-    "recentForm": {
-      "matches": 10,
-      "wins": 5,
-      "draws": 1,
-      "losses": 4,
-      "goalsFor": 18,
-      "goalsAgainst": 12,
-      "points": 16,
-      "winRate": 0.5,
-      "pointsPerMatch": 1.6,
-      "goalDiffPerMatch": 0.6,
-      "cleanSheetRate": 0.3,
-      "formScore": 0.125
-    },
-    "matches": 849
   },
   {
     "team": "Serbia",
@@ -855,25 +855,6 @@
     "matches": 520
   },
   {
-    "team": "Czech Republic",
-    "elo": 1788.57,
-    "recentForm": {
-      "matches": 10,
-      "wins": 4,
-      "draws": 4,
-      "losses": 2,
-      "goalsFor": 18,
-      "goalsAgainst": 12,
-      "points": 16,
-      "winRate": 0.4,
-      "pointsPerMatch": 1.6,
-      "goalDiffPerMatch": 0.6,
-      "cleanSheetRate": 0.5,
-      "formScore": 0.145
-    },
-    "matches": 358
-  },
-  {
     "team": "Kosovo",
     "elo": 1786.07,
     "recentForm": {
@@ -986,6 +967,25 @@
       "formScore": 0.015
     },
     "matches": 724
+  },
+  {
+    "team": "Czech Republic",
+    "elo": 1765.88,
+    "recentForm": {
+      "matches": 10,
+      "wins": 3,
+      "draws": 4,
+      "losses": 3,
+      "goalsFor": 17,
+      "goalsAgainst": 14,
+      "points": 13,
+      "winRate": 0.3,
+      "pointsPerMatch": 1.3,
+      "goalDiffPerMatch": 0.3,
+      "cleanSheetRate": 0.4,
+      "formScore": -0.03
+    },
+    "matches": 359
   },
   {
     "team": "Hungary",
@@ -1444,25 +1444,6 @@
     "matches": 660
   },
   {
-    "team": "Haiti",
-    "elo": 1686.51,
-    "recentForm": {
-      "matches": 10,
-      "wins": 3,
-      "draws": 4,
-      "losses": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 11,
-      "points": 13,
-      "winRate": 0.3,
-      "pointsPerMatch": 1.3,
-      "goalDiffPerMatch": 0.1,
-      "cleanSheetRate": 0.4,
-      "formScore": -0.06
-    },
-    "matches": 508
-  },
-  {
     "team": "Padania",
     "elo": 1685.25,
     "recentForm": {
@@ -1539,6 +1520,44 @@
     "matches": 612
   },
   {
+    "team": "Haiti",
+    "elo": 1668.85,
+    "recentForm": {
+      "matches": 10,
+      "wins": 3,
+      "draws": 3,
+      "losses": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 11,
+      "points": 12,
+      "winRate": 0.3,
+      "pointsPerMatch": 1.2,
+      "goalDiffPerMatch": 0,
+      "cleanSheetRate": 0.4,
+      "formScore": -0.115
+    },
+    "matches": 509
+  },
+  {
+    "team": "Bosnia and Herzegovina",
+    "elo": 1665.72,
+    "recentForm": {
+      "matches": 10,
+      "wins": 3,
+      "draws": 5,
+      "losses": 2,
+      "goalsFor": 21,
+      "goalsAgainst": 12,
+      "points": 14,
+      "winRate": 0.3,
+      "pointsPerMatch": 1.4,
+      "goalDiffPerMatch": 0.9,
+      "cleanSheetRate": 0.1,
+      "formScore": 0.07
+    },
+    "matches": 282
+  },
+  {
     "team": "Isle of Wight",
     "elo": 1663.58,
     "recentForm": {
@@ -1556,25 +1575,6 @@
       "formScore": 0.445
     },
     "matches": 48
-  },
-  {
-    "team": "South Africa",
-    "elo": 1663.32,
-    "recentForm": {
-      "matches": 10,
-      "wins": 4,
-      "draws": 3,
-      "losses": 3,
-      "goalsFor": 15,
-      "goalsAgainst": 11,
-      "points": 15,
-      "winRate": 0.4,
-      "pointsPerMatch": 1.5,
-      "goalDiffPerMatch": 0.4,
-      "cleanSheetRate": 0.2,
-      "formScore": 0.045
-    },
-    "matches": 477
   },
   {
     "team": "Guatemala",
@@ -1613,6 +1613,25 @@
       "formScore": -0.1
     },
     "matches": 705
+  },
+  {
+    "team": "South Africa",
+    "elo": 1652.86,
+    "recentForm": {
+      "matches": 10,
+      "wins": 4,
+      "draws": 2,
+      "losses": 4,
+      "goalsFor": 14,
+      "goalsAgainst": 12,
+      "points": 14,
+      "winRate": 0.4,
+      "pointsPerMatch": 1.4,
+      "goalDiffPerMatch": 0.2,
+      "cleanSheetRate": 0.2,
+      "formScore": -0.025
+    },
+    "matches": 478
   },
   {
     "team": "Burkina Faso",
@@ -1670,25 +1689,6 @@
       "formScore": 0.215
     },
     "matches": 27
-  },
-  {
-    "team": "Bosnia and Herzegovina",
-    "elo": 1644.46,
-    "recentForm": {
-      "matches": 10,
-      "wins": 4,
-      "draws": 4,
-      "losses": 2,
-      "goalsFor": 21,
-      "goalsAgainst": 11,
-      "points": 16,
-      "winRate": 0.4,
-      "pointsPerMatch": 1.6,
-      "goalDiffPerMatch": 1,
-      "cleanSheetRate": 0.2,
-      "formScore": 0.175
-    },
-    "matches": 281
   },
   {
     "team": "Cape Verde",
@@ -1803,6 +1803,25 @@
       "formScore": -0.03
     },
     "matches": 383
+  },
+  {
+    "team": "Qatar",
+    "elo": 1609.47,
+    "recentForm": {
+      "matches": 10,
+      "wins": 1,
+      "draws": 5,
+      "losses": 4,
+      "goalsFor": 10,
+      "goalsAgainst": 17,
+      "points": 8,
+      "winRate": 0.1,
+      "pointsPerMatch": 0.8,
+      "goalDiffPerMatch": -0.7,
+      "cleanSheetRate": 0.1,
+      "formScore": -0.41
+    },
+    "matches": 634
   },
   {
     "team": "Kárpátalja",
@@ -1993,25 +2012,6 @@
       "formScore": 0.3428
     },
     "matches": 9
-  },
-  {
-    "team": "Qatar",
-    "elo": 1586.43,
-    "recentForm": {
-      "matches": 10,
-      "wins": 1,
-      "draws": 4,
-      "losses": 5,
-      "goalsFor": 9,
-      "goalsAgainst": 19,
-      "points": 7,
-      "winRate": 0.1,
-      "pointsPerMatch": 0.7,
-      "goalDiffPerMatch": -1,
-      "cleanSheetRate": 0.1,
-      "formScore": -0.495
-    },
-    "matches": 633
   },
   {
     "team": "Tamil Eelam",

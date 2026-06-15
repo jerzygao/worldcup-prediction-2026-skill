@@ -16,6 +16,14 @@
 
 校验脚本必须检查 `win_or_not in ("Win", "Draw", "Loss")`，否则视为 API 异常。
 
+**API 端点变更（2026-06-14）：**
+站点从 jiajielitong.com 升级改名为 **SoccerAssess**，`/matches/predict/` 端点变更为 `/matches/simulate/`。`wc_client.py` 已修复。默认 competition 也从 `"worldcup"` 改为 `"euro"`，调用时必须显式传 `competition="worldcup"`。
+
+**临时 key 跨进程丢失（关键）：**
+`request_agent_temp_key()` 原用进程内存缓存。Cron 每次启动新 Python 进程→缓存丢失→重新申请 key→API 报 429 "This source IP has already requested an Agent temporary key today"。已修复（2026-06-14）：新增 `_temp_key_load()` / `_temp_key_save()`，将临时 key 持久化到 `output/.agent_temp_key.json`，跨进程复用。key 24h TTL 过期后自动重新申请。
+
+修复文件：`wc_client.py` 新增 `_TEMP_KEY_FILE`、`_temp_key_load()`、`_temp_key_save()`，修改 `request_agent_temp_key()` 在内存缓存 miss 后先查磁盘缓存。
+
 **临时 key 耗尽后全量 429：**
 用完 2 次额度后，后续请求全部返回 429。同 IP 无法在同一天申请新 key。解决方案：cron 每天跑 2 场，慢慢攒。
 

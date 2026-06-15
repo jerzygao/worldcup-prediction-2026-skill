@@ -16,15 +16,15 @@
     "winTendencyCoef": -0.949043,
     "gdTendencyCoef": 0.139084,
     "homeCoef": 0.341845,
-    "drawBias": -0.15,
-    "drawEloPenalty": 0.045,
+    "drawBias": -0.03,
+    "drawEloPenalty": 0.025,
     "drawFifaPenalty": 0,
     "drawFormPenalty": 0,
     "drawTendencyCoef": 1.413384,
     "drawNeutralBoost": 0.0039
   },
   "externalFeatureBlend": {
-    "odds": 0.35,
+    "odds": 0.25,
     "squadRating": 0.08,
     "marketValue": 0.07
   },
@@ -32,7 +32,9 @@
     "Robust modern update adopted after constrained search: validation improved while train Log Loss stayed essentially flat.",
     "FIFA is now a moderate supporting signal in the modern-era fit, but Elo remains the main baseline strength feature.",
     "Rolling draw tendency improved validation Log Loss and Brier Score.",
-    "Odds are blended as a pre-match market correction when available, not fitted from historical odds yet."
+    "Odds are blended as a pre-match market correction when available, not fitted from historical odds yet.",
+    "2026-06-15 HOTFIX v1: drawBias -0.15→-0.10, predictedScore threshold 0.28→0.25. Effect: predicted 1-1 from 0→10 matches.",
+    "2026-06-15 HOTFIX v2: drawBias -0.10→-0.03, drawEloPenalty 0.045→0.025, odds blend 0.35→0.25. Rationale: 10 completed matches 40% draw rate, model 0% draw direction prediction. Market odds compress draws → reduced odds influence + freed draw logit constraints."
     ,
     "Previous conservative default was elo-fifa-tendency-conservative-2026-05-19 with validation Log Loss 0.876161."
   ]

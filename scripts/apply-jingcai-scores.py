@@ -19,7 +19,7 @@ import shutil
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if not os.path.exists(os.path.join(BASE_DIR, "match-predictions-2026.json")):
     BASE_DIR = os.getcwd()
-PRED_FILE = os.path.join(BASE_DIR, "match-predictions-2026.json")
+PRED_FILE = os.path.join(BASE_DIR, "output", "match-predictions-2026.json")
 JC_FILE = os.path.join(BASE_DIR, "data", "jingcai-score-odds.json")
 
 # 队名映射：英文 → 竞彩中文

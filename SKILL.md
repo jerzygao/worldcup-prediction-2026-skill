@@ -641,6 +641,8 @@ bash scripts/run-score-odds-pipeline.sh
 
 **保留的旧脚本：** `fetch-jingcai-score-odds.py`（仅波胆）已废弃，被 `fetch-jingcai-odds.py`（波胆+让球合并）替代。
 
+**⚠️ 2026-06-15 已知缺失：** `fetch-jingcai-odds.py` 尚未创建（已废弃的 `fetch-jingcai-score-odds.py` 存在但只输出 DEPRECATED 并退出）。需要创建该脚本后才能执行波胆+让球拉取。在此之前竞彩步骤跳过。
+
 ### 数据文件
 
 - `data/manual/titan007-match-ids.csv` — 72 场 ID 映射表（⚠️ 无 date 字段，需从 fixtures 查）
@@ -760,6 +762,17 @@ print(f"Odds API 赔率行: {len(api_rows)}")    # 应 ≈ 40
 | `references/completed-matches-2026.md` | 已完赛场次记录（日期、比分、模型验证结果） |
 | `references/post-match-workflow.md` | 赛后验证与简化报告工作流（格式规范、陷阱、脚本） |
 | `references/jingcai-correct-score-odds.md` | ⭐ 竞彩数据采掘方案（波胆 API 接口、CRS 映射表、HHAD 让球数据、队名陷阱、脚本用法、集成方式） |
+
+## Meyo 上游版本检查
+
+本 skill 在觅游(Meyo)社区有注册版本（`xiaoshi-2026worldcup-prediction`）。检查上游是否有更新：
+
+```bash
+curl -s -H "Authorization: Bearer <meyo_key>" \
+  https://www.meyo123.com/api/v1/skills/worldcup-prediction
+```
+
+2026-06-15 检查结果：上游版本 0.0.1，无实质更新。本地版本已是上游的超集（多了 Titan007 双源赔率、泊松 xG 引擎、竞彩管线、赛后自动更新、逻辑回归重拟合脚本等）。
 
 ## 外部模型交叉验证
 
@@ -976,7 +989,9 @@ else:
 - `fave` 本身是概率估算值，如果模型低估了优势方（如美国vs巴拉圭仅估47%胜率），那映射出来的比分必然是保守的1-0，不可能出现4-1
 - 美国4-1的实际赛果暴露了根因：**问题不在映射逻辑，在概率估算系统**（特征权重、赔率输入、Elo参数）低估了胜率
 
-**⚠️ 平局系统性低估（详见 `references/draw-underprediction-diagnosis.md`）：** 模型平局概率均值 ~20%，全 72 场无平局方向预测。根因链：drawBias 过负（-0.15）→ softmax 压缩平局 logit → 赔率融合二次压缩 → predictedScore 阈值 0.28 不可达。2026-06-15 两轮 hotfix 后 predictedScore=1-1 从 0→20 场，平局均值 21.9%，但方向预测仍为 0。完整修复需跑逻辑回归重拟合。
+**⚠️ 平局系统性低估（详见 `references/draw-underprediction-diagnosis.md`）：** 模型平局概率均值 ~20%，全 72 场无平局方向预测。根因链：drawBias 过负（-0.15）→ softmax 压缩平局 logit → 赔率融合二次压缩 → predictedScore 阈值不可达。
+
+**排查陷阱：homeCoef 不是平局压制的原因。** `wc26-official-group-stage.csv` 中仅墨西哥/加拿大/美国三个东道主为 `neutral=FALSE`，其余 60+ 场全为 `neutral=TRUE`。`predict-match.mjs` 中 `homeCoef * homeAdvantage` 在 neutral=true 时归零。不能通过降低 homeCoef 来提升平局概率——那只会影响东道主比赛的预测，对绝大多数 neutral 场次无效果。正确的做法是完整逻辑回归重拟合（见上方「工作流」第7步）。
 
 **✅ 竞彩数据采掘脚本已就绪（波胆 + 让球双管线）**  
 **2026-06-13 升级为混合模式**：不再是简单取最低赔率比分，而是 **模型方向 + 竞彩比分过滤**：
